@@ -1,0 +1,97 @@
+using UnityEngine;
+[ExecuteInEditMode]
+public class GroundCheck : MonoBehaviour
+{
+
+    public event System.Action Grounded;
+    const float OriginOffset = .001f;
+    public int uhh = 0;
+    void LateUpdate()
+    {
+        void test()
+        {
+            uhh += 1;
+        }
+        Grounded += test;
+        // Check if we are grounded now.
+        bool isGroundedNow = Physics.Raycast(RaycastOrigin, Vector3.down, distanceThreshold * 2);
+        // Call event if we were in the air and we are now touching the ground.
+        if (isGroundedNow && !isGrounded)
+        {
+            Grounded?.Invoke();//Grounded里面可能可以加事件，然后这个if下就会召唤这些事件了，掉血死亡啥的可能]
+            //好像并不是
+        }
+        Grounded?.Invoke();
+        // Update isGrounded.
+        isGrounded = isGroundedNow;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+完整版GroundCheck
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class GroundCheck : MonoBehaviour
+{
+    [Tooltip("Maximum distance from the ground.")]
+    public float distanceThreshold = .15f;
+
+    [Tooltip("Whether this transform is grounded now.")]
+    public bool isGrounded = true;
+    /// <summary>
+    /// Called when the ground is touched again.
+    /// </summary>
+    ///System.Action是 public delegate,那么Grounded就是event
+    public event System.Action Grounded;
+    /*public void test(int param)
+    {
+        Debug.Log("asd");
+    }
+    Grounded+=test;*/
+    /*public void Grounded()
+    {
+        isGrounded=false;
+    }*/
+    //上面两种方法都不行
+    const float OriginOffset = .001f;
+    Vector3 RaycastOrigin => transform.position + Vector3.up * OriginOffset;
+    float RaycastDistance => distanceThreshold + OriginOffset;
+    public int uhh = 0;
+
+    void LateUpdate()
+    {
+        void test(){
+            uhh +=1;
+        }
+        Grounded += test;
+        // Check if we are grounded now.
+        bool isGroundedNow = Physics.Raycast(RaycastOrigin, Vector3.down, distanceThreshold * 2);
+
+        // Call event if we were in the air and we are now touching the ground.
+        if (isGroundedNow && !isGrounded)
+        {
+            Grounded?.Invoke();//Grounded里面可能可以加事件，然后这个if下就会召唤这些事件了，掉血死亡啥的可能
+        }
+        Grounded?.Invoke();
+        // Update isGrounded.
+        isGrounded = isGroundedNow;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Draw a line in the Editor to show whether we are touching the ground.
+        Debug.DrawLine(RaycastOrigin, RaycastOrigin + Vector3.down * RaycastDistance, isGrounded ? Color.white : Color.red);
+    }
+
+
+}

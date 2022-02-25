@@ -1,0 +1,15 @@
+如果选择了对象，则实现 OnDrawGizmosSelected 来绘制辅助图标。
+仅在选择了对象时，才绘制 Gizmos。Gizmos 是不可选择的。 这用于简化设置。例如，爆炸脚本可以绘制 一个显示爆炸半径的球体。
+
+using UnityEngine;
+public class gizmoTest : MonoBehaviour
+{
+    public float explosionRadius = 5.0f;
+
+    void OnDrawGizmosSelected()
+    {
+        // Display the explosion radius when selected
+        Gizmos.color = new Color(1, 1, 0, 0.75F);
+        Gizmos.DrawSphere(transform.position, explosionRadius);
+    }
+}

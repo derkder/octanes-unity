@@ -8,5 +8,12 @@ https://zhuanlan.zhihu.com/p/165658071
 更系统的：https://zhuanlan.zhihu.com/p/22976065
 实现步骤：
 步骤一、为状态定义一个接口
+class HeroineState
+{
+public:
+	virtual ~HeroineState( ) {}
+	virtual void handleInput(Heroine& heroine, Input input) {}
+	virtual void update(Heroine& heroine) {}
+};
 步骤二、为每个状态定义一个类
 步骤三、恰当地进行状态委托

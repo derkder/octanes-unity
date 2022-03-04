@@ -1,0 +1,10 @@
+1.安装Universal RP
+在Window工具栏下打开Package Manager,搜索Universal RP，点击install进行安装。
+2.点击项目(Project)下的+号创建新的渲染管线，渲染(Rendering) – Universal Render Pipeline – Pipeline Asset(Forward Renderer)
+3.点击工具栏Edit – 项目设置(Project Settings)打开设置页面选择图形(Graphics)给可编辑渲染管线设置添加刚才新创建的URP Pipeline
+4.在项目设置(Project Settings)中的质量(Quality)一栏的设置中也添加新建的URP Pipeline。
+
+
+
+
+https://blog.csdn.net/sanqiuai/article/details/121412929

@@ -1,0 +1,3 @@
+1.Resources.Load()方式加载 
+2.instaniate()加载 
+3.打包AB包，assetsbundle.load 加载

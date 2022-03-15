@@ -1,0 +1,15 @@
+https://zhuanlan.zhihu.com/p/196689870?utm_source=ZHShareTargetIDMore
+
+FGUI的优点
+1、FariyGUI提供了一个自己的独立编辑器，基本所有UI功能都能实现。
+2、FGUI对美术十分友好，各种习惯跟Adobe系列的一致，编辑器本身就是AS3开发的。
+3、包装了一些概念，十分方便拼界面工作；如关联=>屏幕适配 、控制器=>状态控制等等。
+4、开发效率高，这种开发模式的效率是其他UI远远不能比的，越大的项目优势越明显。UI开发有一个很大的特点是重构次数比较多，FaityGUi只需要程序处理逻辑相关的更新，节省了拼ui的工作。
+5、性能问题，NGUI/UGUI为了降低DrawCall采用的合并Mesh技术对UI制作有要求，一旦动静分离不合理会引发灾难。FairyGUI提供的优化技术是动态后期优化，在制作时对UI人员基本没有要求。简单的说，
+就是你随便拼，FairyGUI负责自动优化。
+///5！！！！光头强讲过这个
+
+
+FGUI的缺点
+调试缺点，FairyGUI的组件并不是MonoBehaviour类型的，所以在Unity里面看到的GameObject并不能和组件一一对应，遇到一些奇怪问题的时候需要一定想象力，不能像UGUI或者NGUI简单直接看到UI的参数。
+FairyGUI需要学习多一个编辑器，了解一种不同的开发模式。

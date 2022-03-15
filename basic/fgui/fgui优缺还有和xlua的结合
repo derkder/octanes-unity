@@ -13,3 +13,10 @@ FGUI的优点
 FGUI的缺点
 调试缺点，FairyGUI的组件并不是MonoBehaviour类型的，所以在Unity里面看到的GameObject并不能和组件一一对应，遇到一些奇怪问题的时候需要一定想象力，不能像UGUI或者NGUI简单直接看到UI的参数。
 FairyGUI需要学习多一个编辑器，了解一种不同的开发模式。
+
+
+
+
+
+结合：
+https://blog.csdn.net/weixin_34174132/article/details/91660250

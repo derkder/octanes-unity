@@ -1,0 +1,10 @@
+Awake：对象被激活时调用，只调用一次，初始化组件->
+OnEable：脚本由非激活状态变成激活状态时调用，常用来处理激活后的逻辑->
+Start：脚本被激活时调用，只调用一次，可以用来初始化依赖组件的变量->
+FixedUpdate：每帧可能调用多次，常用来处理与运动有关（不依赖帧率）的逻辑->
+Update：每帧调用一次，处理一般逻辑->
+LaterUpdate：每帧一次，常用来处理依赖update的逻辑（所以在update后执行）->
+OnGUI：每帧多次，处理GUI事件->
+OnDisable：与OnEable对应，激活转为非激活时调用，处理非激活的逻辑->
+OnDestroy：对象销毁时调用，处理垃圾->
+OnApplicationQuit：程序退出时调用

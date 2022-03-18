@@ -1,0 +1,15 @@
+简单：
+Unity2d动态影子
+1、首先创建自己准备阴影的物体，给它加上Rigidbody2d组件，将Body type属性选择Kinematic
+2、将sprite复制,将复制的物体做成它的子类,然后改变子类的Body type成Dynmaic,将Lineardrag改成10，在将color变成黑色，调一下透明度，改变一下层级，将子类位置往下偏移，做成影子，
+在添加Distance joint2d组件,将Auto Configure Distance勾掉，ConnectedRigidBody选择父类
+https://blog.csdn.net/qq_36573420/article/details/82978650
+
+
+
+
+复杂
+使用UnityShader实现2D阴影效果
+实现原理------------------------------------------------------------------------------------
+使用2个Pass，第二个Pass渲染2D角色，第一个Pass渲染阴影，使用矩阵的旋转变换和平移变换控制阴影的旋转和偏移，修改阴影的颜色即可，注意透明队列的渲染顺序
+https://blog.csdn.net/weixin_36961960/article/details/116079203

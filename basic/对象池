@@ -1,0 +1,4 @@
+https://blog.csdn.net/qq_44053474/article/details/86232301
+首先创建一个对象池脚本，此脚本是一个单例脚本（不需要挂在任何游戏对象上面）。
+创建一个名为Game Manager的脚本，来控制子弹的生成
+为子弹的预设体创建Bullet脚本

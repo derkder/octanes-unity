@@ -1,4 +1,26 @@
-Material mat = renderer.material;
+public class RainbowColour : MonoBehaviour
+{
+
+    Renderer rend;
+    Material material;
+
+    void Start()
+    {
+        rend = GetComponent<Renderer>();
+        material = rend.material;
+        material.SetColor("_Color", Color.red);
+    }
+    void Update()
+    {
+
+    }
+}
+
+
+
+
+
+public Material mat = renderer.material;
 void Update () {
      Color baseColor = Color.yellow; //Replace this with whatever you want for your base color at emission level '1'
      Color finalColor = baseColor * Mathf.LinearToGammaSpace (emission);

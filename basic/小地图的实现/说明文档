@@ -1,0 +1,9 @@
+专门创建一个顶视角的摄像机，然后摄像机有个output Texture属性，可以将渲染的图形输出到Render Texture中，
+我们使用UGUI的Raw Image来显示这张Render Texture即可。
+
+
+
+总：新建render texture，一个给相机的output texture，一个给ui的raw image的render texture
+优化问题：Mask蒙版边缘锯齿问题
+优化方法：取蒙版图的alpha通道作为小地图的alpha通道即可
+

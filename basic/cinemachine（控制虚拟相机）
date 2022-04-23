@@ -13,3 +13,17 @@ Cinemachine系统鼓励你创建多个虚拟相机。虚拟相机有很好的性
 
 
 虚拟相机的一个最佳实践是：一个镜头使用一个虚拟相机。首先是给主摄像机添加CinemachineBrain这个组件，然后给就可以开始创建需要的其他摄像机了
+
+
+
+
+自动选择/切换最适合的摄像头（Cinemachine Clear Shot Camera）
+https://blog.csdn.net/wangjiangrong/article/details/109057644
+Clear Shot Camera属于一种管理类的Camera，在其根目录下会有一个或多个VirtualCamera，ClearShot会从中选择出针对被观察目标的最好画面质量的VirtualCamera。
+因此当场景中有很多Camera的时候使用该功能，可以保证我们的画面都可以清楚的看见我们的目标。
+至于如何鉴别哪个VirtualCamera的画面质量更好，就需要用到我们上一篇文章所提到的Cinemachine Collider。它会分析画面中的障碍物得到ShotQuality的数值，以及
+根据我们设置的optimal target distance的数值等作参考，根据这些信息选出最好的作为当前Live状态的VirtualCamera。如果这些数值相同，那么会根据每个VirtualCamera在
+ClearShot中所设置的优先级（priority）来选择。
+因此ClearShot下的每个VirtualCamera都必须带有Cinemachine Collider的组件，不过我们也可以通过给ClearShot Camera自身添加Cinemachine Collider来代替，
+这样就不需要给各个VirtualCamera添加了。
+此外，我们依旧可以给ClearShot中每个VirtualCamera制定他们间的混合效果。

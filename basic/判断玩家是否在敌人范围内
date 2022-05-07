@@ -1,0 +1,4 @@
+一、overlapsphere：
+1003_practice3d
+二、 enemy = GameObject.Find("Enemy").GetComponent<Transform>();
+https://blog.csdn.net/qq_37601496/article/details/78731165

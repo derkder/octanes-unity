@@ -1,5 +1,5 @@
 在animal farm就不能像小狗骑士那样直接Instance而是要：
-private static PlayerMovement instance;
+    private static PlayerMovement instance;
     public static PlayerMovement Instance
     {
         get
@@ -16,7 +16,9 @@ private static PlayerMovement instance;
                     Debug.Log("can not find GameObject.farmer");
                 }
             }
-            return instance; 
+            return instance; //private static属性的居然也可以
         }
     }
  原因大概是因为在hierarchy窗口里是在父类下面的，直接写找不到
+ 
+//感谢光头强的亲情帮助

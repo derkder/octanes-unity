@@ -2,3 +2,23 @@
 1003_practice3d
 二、 enemy = GameObject.Find("Enemy").GetComponent<Transform>();
 https://blog.csdn.net/qq_37601496/article/details/78731165
+bool TargetInAttackRange()//设置attacktarget
+    {
+        GameObject[] farmers;
+        farmers = GameObject.FindGameObjectsWithTag("farmer");
+        if (farmers != null)
+        {
+            Debug.Log("farmers != null");
+        }
+        for(int i = 0; i < farmers.Length; i++)
+        {
+            if (Vector3.Distance(farmers[i].transform.position, transform.position)<sightRadius)
+            {
+                attackTarget = farmers[i].transform;
+                return true;
+            }
+        }
+        attackTarget = null;
+        return false;
+    }
+//因为是2d所以这么写，不知道这种找所有farmer的方式会不会对性能开销很大

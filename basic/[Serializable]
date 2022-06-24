@@ -1,0 +1,2 @@
+we create a custom Player struct and give it the [Serializable] attribute to make it serializable. We then create a private field of the Player type and 
+apply [SerializeField] attribute to it to make it show up in the Inspector.

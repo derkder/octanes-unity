@@ -1,0 +1,6 @@
+大致的原理就是LuaBehavior.cs连接一个Lua脚本，并获取Lua脚本中的全局函数，Start，Update等等，在LuaBehavior的Start和Update中调用因为Lua可以调用C#的所有函数，
+基本上能做到和C#功能等价接下来，用C#怎么开发，用Lua也怎么开发，然后多利用Lua的hotreload特性快速迭代
+
+
+
+https://zhuanlan.zhihu.com/p/76494782

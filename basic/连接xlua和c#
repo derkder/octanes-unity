@@ -22,7 +22,7 @@ public class Injection
 public class LuaBehaviour : MonoBehaviour {
     //lua代码，在腾讯实例中是在Hierarchy面板赋值的
     public TextAsset luaScript;
-    public Injection[] injections;//大概是放lua代码的地方
+    public Injection[] injections;//大概是放lua脚本的地方
  
     internal static LuaEnv luaEnv = new LuaEnv(); //all lua behaviour shared one luaenv only!
     internal static float lastGCTime = 0;

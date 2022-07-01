@@ -1,5 +1,5 @@
 两个reddit上的回答（回答的还不太一样）
 UnityEvents是带序列化的Actions.需要序列化用event，其他用actions因为它更快
 
-UnityEvent是增强版的action. 它做同样的事情，但也 works with the editor.这种额外的功能会带来性能成本。
+UnityEvent是增强版的action. 它做同样的事情，但也 works with the editor（例如collider？）.这种额外的功能会带来性能成本。
 You use UnityEvents when you need an action that can interact with the editor, the rest of the time you just use the normal actions.

@@ -1,0 +1,165 @@
+https://blog.csdn.net/qq_46044366/article/details/125138735
+https://docs-multiplayer.unity3d.com/netcode/current/about
+NetworkManager 相当于服务端/客户端的全局管理器，是个单例脚本，用于处理网络相关配置，网络预设体，网络场景管理等和网络相关的东西。
+在上面的component中，NetworkPrefabs 就是网络中需要同步的游戏物体。当我们给 Player Prefab 赋值以后，只要客户端连接到服务器，游戏会自动为客户端生成这个 Prefab。
+
+
+NetworkBehavoiur 是继承自 MonoBehaviour 的抽象类，用于网络实体之间的通信。我们可以在继承自 NetworkBehaviour 的类中编写代码，来为我们的 Network Object 添加各式各样的逻辑。
+可以看出 NetworkBehaviour 所属于 Network Object 。为了实现 Network Object 之间的通信与同步，NetworkBehaviour 提供了两个解决方案：NetworkVariable 和 RPC :
+一、NetworkVariable[周期性地同步、只有服务端能写，任何人能读]
+NetworkVariable 的状态会被周期性地同步（复制）到所有连接到服务端的客户端里，当一个新的客户端加入连接后，其他客户端的 NetworkVariable 的最新状态会被同步到新的客户端。
+NetworkVariable 的权限是服务端能写，任何人能读。这意味着只有服务端才有修改 NetworkVariable 的能力，然后客户端能够通过网络同步读取到更新后的 NetworkVariable
+二、RPC【客户端可以借助服务器能写的权限来改变自己的 NetworkVariable】
+客户端通过网络从服务端中请求改变自己 Player 的位置。
+Netcode 有两种 RPC 请求方式：ServerRpc 和 ClientRpc
+ServerRpc 就是客户端发送 RPC 到服务端。比如客户端针对一个 Network Object 向服务端发送 RPC，这个 RPC 会先被保存到本地的队列，然后被发送至服务端。
+服务端会根据 RPC 中记录的这个 Network Object 的信息，通过 NetworkManager 找到属于这个客户端的 Network Object，然后就可以根据 RPC 中要求调用的方法
+对这个 Network Object 进行状态修改。有点像将一个方法委托给远端进行调用。
+ClientRpc 就是反过来，服务端向客户端发送 RPC 请求。
+需要发送 RPC 的方法有几个注意点：
+1）方法上方需添加特性，指明是 [ServerRpc] 还是 [ClientRpc]
+2）方法名要以 ClientRpc 或 ServerRpc 结尾
+3）方法必须声明在继承自 NetworkBehaviour 类的脚本中
+4）必须指明当前在服务端还是客户端调用，Demo 中判断方式如下，可借助 NetworkManager 中的 IsServer，IsClient，IsHost
+
+
+
+
+
+
+
+回看 HelloWorldManager 脚本，进入任意一种模式后点击对应的按钮会执行 SubmitNewPosition 方法，来调用 Move 方法。
+如果是纯服务器（Host 不算），那么它会找到所有连接的客户端的 Id，然后通过NetworkManager 中的 NetworkSpawnManager 找到对应 Id 的 Network Object，执行它的 Move 方法。
+如果不是纯服务器，则可以直接找到本地（客户端）里的 Network Object，执行它的 Move 方法。
+所以如果是 Clinet 连接 Server ，在 Client 模式点击 Request Position Change，只会改变 Client 中那个 Player 的位置，然后同步给其他端。在 Server 模式点击 Move，
+服务端和客户端中所有的 Player 位置都会同步发生改变。
+
+如果是 Clinet 连接 Host ，点击 Move，只有 Host 中的那个 Player 位置会改变，然后同步给其他端。点击 Clinet 中的 Request Position Change 只会改变当前 Client 中
+那个 Player 的位置，然后同步给其他端。
+
+
+
+
+
+
+
+
+using Unity.Netcode;
+using UnityEngine;
+namespace HelloWorld
+{
+    public class HelloWorldPlayer : NetworkBehaviour
+    {
+        public NetworkVariable<Vector3> Position = new NetworkVariable<Vector3>();
+
+        public override void OnNetworkSpawn()
+        {
+            if (IsOwner)
+            {
+                Move();
+            }
+        }
+
+        public void Move()
+        {
+            if (NetworkManager.Singleton.IsServer)
+            {
+                var randomPosition = GetRandomPositionOnPlane();
+                transform.position = randomPosition;
+                Position.Value = randomPosition;
+            }
+            else
+            {
+                SubmitPositionRequestServerRpc();
+            }
+        }
+
+        [ServerRpc]
+        void SubmitPositionRequestServerRpc(ServerRpcParams rpcParams = default)
+        {
+            Position.Value = GetRandomPositionOnPlane();
+        }
+
+        static Vector3 GetRandomPositionOnPlane()
+        {
+            return new Vector3(Random.Range(-3f, 3f), 1f, Random.Range(-3f, 3f));
+        }
+
+        void Update()
+        {
+            transform.position = Position.Value;
+        }
+    }
+}
+
+
+
+
+
+
+using Unity.Netcode;
+using UnityEngine;
+
+namespace HelloWorld
+{
+    public class HelloWorldManager : MonoBehaviour
+    {
+        void OnGUI()
+        {
+            GUILayout.BeginArea(new Rect(10, 10, 300, 300));
+            if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
+            {
+                StartButtons();
+            }
+            else
+            {
+                StatusLabels();
+
+                SubmitNewPosition();
+            }
+
+            GUILayout.EndArea();
+        }
+
+        static void StartButtons()
+        {
+            if (GUILayout.Button("Host")) NetworkManager.Singleton.StartHost();
+            if (GUILayout.Button("Client")) NetworkManager.Singleton.StartClient();
+            if (GUILayout.Button("Server")) NetworkManager.Singleton.StartServer();
+        }
+
+        static void StatusLabels()
+        {
+            var mode = NetworkManager.Singleton.IsHost ?
+                "Host" : NetworkManager.Singleton.IsServer ? "Server" : "Client";
+
+            GUILayout.Label("Transport: " +
+                NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
+            GUILayout.Label("Mode: " + mode);
+        }
+
+static void SubmitNewPosition()
+        {
+            if (GUILayout.Button(NetworkManager.Singleton.IsServer ? "Move" : "Request Position Change"))
+            {
+                if (NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient )
+                {
+                    foreach (ulong uid in NetworkManager.Singleton.ConnectedClientsIds)
+                        NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(uid).GetComponent<HelloWorldPlayer>().Move();
+                }
+                else
+                {
+                    var playerObject = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
+                    var player = playerObject.GetComponent<HelloWorldPlayer>();
+                    player.Move();
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

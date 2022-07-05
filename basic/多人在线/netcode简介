@@ -63,7 +63,7 @@ namespace HelloWorld
 
         public void Move()
         {
-            if (NetworkManager.Singleton.IsServer)//如果这里作为server端
+            if (NetworkManager.Singleton.IsServer)//如果这里作为server端用networkVariable
             {
                 var randomPosition = new Vector3(Random.Range(-3f, 3f), 1f, Random.Range(-3f, 3f));
                 transform.position = randomPosition;

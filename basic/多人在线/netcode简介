@@ -63,13 +63,13 @@ namespace HelloWorld
 
         public void Move()
         {
-            if (NetworkManager.Singleton.IsServer)
+            if (NetworkManager.Singleton.IsServer)//如果这里作为server端
             {
                 var randomPosition = new Vector3(Random.Range(-3f, 3f), 1f, Random.Range(-3f, 3f));
                 transform.position = randomPosition;
                 Position.Value = randomPosition;
             }
-            else
+            else//如果这里作为client端，就只能用rpc改
             {
                 SubmitPositionRequestServerRpc();//那么作为client用rpc方式改自己的位置
             }

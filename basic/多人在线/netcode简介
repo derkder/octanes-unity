@@ -46,6 +46,7 @@ ClientRpc 就是反过来，服务端向客户端发送 RPC 请求。
 
 using Unity.Netcode;
 using UnityEngine;
+
 namespace HelloWorld
 {
     public class HelloWorldPlayer : NetworkBehaviour
@@ -64,28 +65,25 @@ namespace HelloWorld
         {
             if (NetworkManager.Singleton.IsServer)
             {
-                var randomPosition = GetRandomPositionOnPlane();
+                var randomPosition = new Vector3(Random.Range(-3f, 3f), 1f, Random.Range(-3f, 3f));
                 transform.position = randomPosition;
                 Position.Value = randomPosition;
             }
             else
             {
-                SubmitPositionRequestServerRpc();
+                SubmitPositionRequestServerRpc();//那么作为client用rpc方式改自己的位置
             }
         }
 
         [ServerRpc]
-        void SubmitPositionRequestServerRpc(ServerRpcParams rpcParams = default)
+        //本来作为client的player无法改变作为NetworkVariable变量的position的值
+        //但加了这个之后就可以了
+        private void SubmitPositionRequestServerRpc(ServerRpcParams rpcParams = default)
         {
-            Position.Value = GetRandomPositionOnPlane();
+            Position.Value = new Vector3(Random.Range(-3f, 3f), 1f, Random.Range(-3f, 3f));
         }
 
-        static Vector3 GetRandomPositionOnPlane()
-        {
-            return new Vector3(Random.Range(-3f, 3f), 1f, Random.Range(-3f, 3f));
-        }
-
-        void Update()
+        private void Update()
         {
             transform.position = Position.Value;
         }

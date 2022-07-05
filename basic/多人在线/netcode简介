@@ -21,7 +21,9 @@ ClientRpc 就是反过来，服务端向客户端发送 RPC 请求。
 2）方法名要以 ClientRpc 或 ServerRpc 结尾
 3）方法必须声明在继承自 NetworkBehaviour 类的脚本中
 4）必须指明当前在服务端还是客户端调用，Demo 中判断方式如下，可借助 NetworkManager 中的 IsServer，IsClient，IsHost
-
+三、rpc vs networkVariable
+将 RPC 用于瞬态事件，信息仅在收到时有用。
+将 NetworkVariables 用于持久状态，以获得超过片刻的信息。
 
 
 

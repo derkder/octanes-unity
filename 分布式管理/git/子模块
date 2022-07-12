@@ -1,0 +1,9 @@
+Git 子模块是什么？
+Git 在它默认的包中提供了子模块，子模块可以把 Git 存储库嵌入到其他存储库中。确切地说，Git 子模块指向子树中的某次提交。
+
+Docs-test GitHub 存储库中的 Git 子模块的样子：
+Git submodules screenshot文件夹@提交 Id 格式表明这个存储库是一个子模块，你可以直接点击文件夹进入该子树。名为 .gitmodules 的配置文件包含所有子模块存储库的详细信息。
+
+
+
+https://zhuanlan.zhihu.com/p/143100657

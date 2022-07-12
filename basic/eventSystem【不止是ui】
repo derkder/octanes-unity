@@ -1,0 +1,20 @@
+EventSystem
+最常见的是在UGUI中，用来进行UI的事件处理和分发。但看其命名，就知道这并不是一个仅仅针对UI的事件系统。参看文档介绍，EventSystem，可以看到：
+EventSystem基于Input，可以对键盘，鼠标，触摸，以及自定义输入进行处理。EventSystem本身是一个管理控制器，核心功能依赖InputModule和Raycaster模块。
+
+Input Module
+用来处理Input数据，管理事件状态，和发送事件给GameObject。
+这是一个可替换模块，比如引擎自带了，StandaloneInputModule和TouchInputModule，也可以自定义。
+
+Raycaster
+用来捕获哪些GameObject需要执行事件处理。一共有3个种类：
+Graphic Raycaster 用于UI元素就是继承自Graphic的对象。所以button这样的Selectable对象需要一个Target Graphic对象。
+Physics 2D Raycaster 用于2D物理碰撞元素，依赖于Collider2D。
+Physics Raycaster 用于3D物理碰撞元素，依赖于Collider。
+
+
+通常，canvas只用了Graphic Raycaster，用来处理UI的事件。所以只要是继承Graphic对象都会自动获得EventSystem事件监听。但场景如果添加了2d / 3d Raycaster的射线检测，
+那么EventSystem也会检测相应的物理元素。
+
+
+原文链接：https://blog.csdn.net/tom_221x/article/details/78457615

@@ -22,3 +22,40 @@
  原因大概是因为在hierarchy窗口里是在父类下面的，直接写找不到
  
 //感谢库巴老人家的倾情帮助
+
+
+
+
+
+
+
+
+
+
+补充另外一个脚本之间【一个物体】传递参数的方式：
+给物体挂两个脚本，假设一个叫PlayerController.cs
+那么另外一个可以：
+public class PlayerHud : MonoBehaviour
+{
+  private PlayerController playerController;//获取脚本
+  private Texture2D heart;
+  private void Start()
+  {
+    playerController = GetComponent<PlayerController>();
+    heart = Resources.Load<Texture2D>("heart");//加载图片
+  }
+  private void OnGUI()
+  {
+    if(playerController.GetHealth() == 6)
+    {
+      GUI.DrawTexture(new Rect(10, 10, 50, 50), heart);
+      GUI.DrawTexture(new Rect(60, 10, 50, 50), heart);
+      GUI.DrawTexture(new Rect(110, 10, 50, 50), heart);
+    }
+  }
+}
+其中GetHealth方法：
+public int GetHealth()
+{
+   return health;//health是private属性
+}

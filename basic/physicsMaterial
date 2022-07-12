@@ -1,0 +1,23 @@
+Unity3D中Physics Material对象可以设置物体的物理特性，对这个对象进行编辑，并应用于GameObject的collider material属性上，可以使物体具有自然界中物体的运动特性。
+
+
+在Unity3d 4.6中已经配置好了5种常用的物理材质，Bouncy、Ice、Metal、Rubber、Wood，在菜单中依次选择Assets-Import Package-Physics Materials即可导入，下面以Ice(冰)材质为例介绍其物理参数。
+Daynamic Friction：动摩擦力，取值范围为0-1，取值为0将导致物体表面接近冰面的特性，取值为1是，除非有外力或重力作用，物体将处于静止。
+Static Friction：静摩擦力，取值同Dynamic friction
+注：在中学物理中对摩擦力的定义是：当一个物体在另一个物体的表面上相对运动(或有相对运动的趋势)时，受到的阻碍相对运动(或阻碍相对运动趋势)的力，叫摩擦力，可分为静摩擦力和滑动摩擦力。
+静摩擦力—— 有相对运动的趋势时发生作用； 滑动摩擦力 ——相对运动是发上作用。
+静摩擦力<= 动摩擦力
+Bounciness：弹力或弹性，取值0-1，0表示不发生弹跳，即物体的动能完全损失；1表示物体发生没有动能损失的反弹，哪自由落体来说明的话，如果值为1，则物体会反弹到自由落体开始的地方
+Friction Combine：摩擦力组合。
+Average：使用两个摩擦力的平均值
+Min：使用两个摩擦力的最小值
+Mix：使用两个摩擦力的最大值
+Multiply：使用两个摩擦力的乘积
+Bounce Combine：反弹组合，同摩擦力组合的选项类似。
+Firction Direction2：摩擦力方向，各向异性的摩擦力方向，如果向量值不为0则各向异性摩擦力将被启用，只有该项启用，动态摩擦力2和静态摩擦力2。
+Dynamic Friction2：动态摩擦力2
+Static Friction2：静态摩擦力2
+
+
+
+原文链接：https://blog.csdn.net/qq_26399665/article/details/52507001

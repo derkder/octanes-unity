@@ -1,2 +1,8 @@
+一、
 一个客户端上发生的事传播给别的客户端：
 客户端里发生后先用[ServerRPC]传给server，再在[ServerRPC]下的函数调用xxxxClientRpc传给所有客户端
+
+
+
+二、物理碰撞
+在2D Space Shooter Sample里说逻辑放在服务器来确保客户端和服务器之间没有不同步或其他物理问题，即使这样会产生同步，但是因为netcode会好很多（但实际没看到这么写

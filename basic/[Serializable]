@@ -8,3 +8,28 @@ apply [SerializeField] attribute to it to make it show up in the Inspector.
 以及[Button]
 下面直接写函数，就直接生成按钮了
 并不是，要多装个插件https://odininspector.com/
+
+没装的时候可以在一般的脚本后面加一段：
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+
+public class testButton : MonoBehaviour
+{
+}
+
+[CustomEditor(typeof(testButton))]
+public class TestOdinIntro2Editor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+        if (GUILayout.Button("Click"))
+        {
+            Debug.LogError("Hello world2");
+        }
+    }
+}
+

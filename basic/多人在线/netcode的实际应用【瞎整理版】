@@ -1,7 +1,7 @@
 一、
 一个客户端上发生的事传播给别的客户端：
 客户端里发生后先用[ServerRPC]传给server，再在[ServerRPC]下的函数调用xxxxClientRpc传给所有客户端
-
+ServerRpc里的代码就是每个客户端都会运行一遍，比如说setSelf
 
 
 二、物理碰撞

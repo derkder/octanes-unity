@@ -1,3 +1,5 @@
-Render textures are textures that can be rendered to. 可以呗渲染的一个材质
+Render textures are textures that can be rendered to. 可以被渲染的一个材质
 They can be used to implement image based rendering effects, dynamic shadows, projectors, reflections or surveillance cameras. 比如说mirror效果
 One typical usage of render textures is setting them as the "target texture" property of a Camera (Camera.
+感觉上次小地图大概也是用这个做的
+大概也可以做非欧几里得box

@@ -26,3 +26,7 @@ void Update () {
      Color finalColor = baseColor * Mathf.LinearToGammaSpace (emission);
      mat.SetColor ("_EmissionColor", finalColor);
 }
+
+
+
+https://answers.unity.com/questions/914923/standard-shader-emission-control-via-script.html

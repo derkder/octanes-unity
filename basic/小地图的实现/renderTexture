@@ -3,3 +3,25 @@ They can be used to implement image based rendering effects, dynamic shadows, pr
 One typical usage of render textures is setting them as the "target texture" property of a Camera (Camera.
 感觉上次小地图大概也是用这个做的
 大概也可以做非欧几里得box
+
+
+
+
+
+
+
+
+在U3D中有一种特殊的Texture类型，叫做RenderTexture，它本质上一句话是将一个FrameBufferObjecrt【gpu里渲染结果的目的地】连接到一个server-side【gpu-side】的Texture对象。
+
+
+
+我们可以将场景的一些渲染结果渲染到一个tex上，这个tex可以被继续使用。例如，汽车的后视镜，后视镜就可以贴一个rendertex，它是从这个视角的摄像机渲染而来。
+我们还可以利用这个进行一些图像处理操作，传统的图像处理在cpu中一个for循环，一次处理一个像素，如果我们渲染一个四方形，然后把原图当成tex传入进去，写一个fragment shader，将渲染的结果渲染到一个rendertex上，那么rendertex上的东西就是图像处理的结果，unity中的一些图像后处理效果（如模糊，hdr等）就是这样做的。
+
+
+
+
+
+
+什么是server-sider的texture？
+在渲染过程中，贴图最开始是存在cpu这边的内存中的，这个贴图我们通常称为client-side的texture，它最终要被送到gpu的存储里，gpu才能使用它进行渲染，送到gpu里的那一份被称为server-side的texture。这个tex在cpu和gpu之间拷贝要考虑到一定的带宽瓶颈。

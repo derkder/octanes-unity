@@ -6,3 +6,31 @@
 
 
 或许可以在协程里写stopAllCooroutines？
+
+
+
+
+
+
+
+
+
+
+
+顺便整理个coroutine的应用：
+void Update()
+  {
+    if (Input.GetKeyUp(KeyCode.Mouse0))
+    {
+      StartCoroutine(CaptureScreenshot());
+    }
+  }
+  IEnumerator CaptureScreenshot()
+  {
+    //只在每一帧渲染完成后才读取屏幕信息（所以相当于发出一个协程之后，这个协程就一直在，加了下面一句后，这个协程会等到读完才往下执行）
+    yield return new WaitForEndOfFrame();
+    //读取屏幕像素信息并存储为纹理数据
+    screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+    screenShot.Apply();
+
+  }

@@ -1,0 +1,29 @@
+可以用来减少单个脚本的长度
+可以将类、结构或接口的定义拆分到两个或多个源文件中，在类声明前添加partial关键字即可。
+
+例如：下面的PartialTest类
+class PartialTest
+{
+  string Str_FieldTest;
+  int Int_FieldTest;
+  public void DoTest()
+  {
+    Debug.Print("Test");
+  }
+}
+
+可在不同源文件中写成下面形式：
+一个文件中写：
+partial class PartialTest
+{
+  string Str_FieldTest;
+  int Int_FieldTest;
+}
+另一个文件中写：
+partial class PartialTest
+{
+  public void DoTest()
+  {
+    Debug.Print("Test");
+  }
+}

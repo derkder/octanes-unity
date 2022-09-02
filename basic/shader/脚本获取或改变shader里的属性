@@ -33,4 +33,13 @@ https://answers.unity.com/questions/914923/standard-shader-emission-control-via-
 
 
 
-另外那个草地的互动里应该也有
+另外那个草地的互动里应该也有[传坐标]:
+using UnityEngine;
+public class ShaderInteractor : MonoBehaviour
+{
+    // Update is called once per frame
+    void Update()
+    {
+        Shader.SetGlobalVector("_PositionMoving", transform.position);
+    }
+}

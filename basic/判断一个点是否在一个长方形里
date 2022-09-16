@@ -1,0 +1,4 @@
+在长方体上挂脚本（也就是下面的代码长方体是transform），worldPosition是球在世界空间上的坐标
+Vector3 localPos = transform.worldToLocalMatrix.MultiplyPoint(worldPosition);
+这样localPos就对应球在以长方形中点为坐标原点的基下的
+然后看localPos.x和长方形一半长度的关系与localPos.y与长方形一般宽度的关系

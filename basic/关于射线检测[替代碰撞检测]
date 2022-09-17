@@ -1,4 +1,4 @@
-OVERXIEW:
+OVERVIEW(因为碰撞在速度快的时候或者因为网络延时会穿透出现检测不到的问题):
 ray&overlapbox(overlapsphere)
 调试：
 Debug.DrawLine()函数和Debug.DrawRay()
@@ -12,3 +12,49 @@ Gizmos.DrawRay
 
 很棒的用射线检测代替碰撞检测近战攻击的例子
 https://blog.csdn.net/wch3351028/article/details/122326021
+public class WeaponRayTest : MonoBehaviour
+{
+    public LayerMask layer;  
+    int hitCount; 
+    public Transform[] Points; //射线发射点
+    public Dictionary<int, Vector3> dic_lastPoints = new Dictionary<int, Vector3>(); //存放上个位置信息
+    private void Start()
+    {  
+        if (dic_lastPoints.Count == 0)
+        {
+            for (int i = 0; i < Points.Length; i++)
+            {
+                dic_lastPoints.Add(Points[i].GetHashCode(), Points[i].position);
+            }
+        }
+    }
+    private void LateUpdate()
+    {
+        SetPostion(Points);
+    }
+    void SetPostion(Transform[] points)
+    { 
+        for (int i = 0; i < points.Length; i++)
+        {
+            var nowPos = points[i]; 
+            dic_lastPoints.TryGetValue(nowPos.GetHashCode(), out Vector3 lastPos); 
+            Debug.DrawLine(nowPos.position, lastPos, Color.blue, 1f); ;
+            Debug.DrawRay(lastPos,   nowPos.position- lastPos, Color.blue, 1f);
+           
+            Ray ray = new Ray(lastPos, nowPos.position - lastPos);
+            RaycastHit[] raycastHits = new RaycastHit[6];
+            Physics.RaycastNonAlloc(ray, raycastHits, Vector3.Distance(lastPos, nowPos.position), layer, QueryTriggerInteraction.Ignore);//NonAlloc说明会记录检测到的所有碰撞体而不是第一个
+ 
+            foreach (var item in raycastHits)
+            {
+                if (item.collider == null) continue;
+                //击中处理
+            }
+  
+            if (nowPos.position != lastPos)
+            { 
+                dic_lastPoints[nowPos.GetHashCode()] = nowPos.position;//存入上个位置信息
+            } 
+        } 
+    } 
+}

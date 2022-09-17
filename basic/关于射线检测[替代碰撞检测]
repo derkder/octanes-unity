@@ -1,0 +1,14 @@
+OVERXIEW:
+ray&overlapbox(overlapsphere)
+调试：
+Debug.DrawLine()函数和Debug.DrawRay()
+Gizmos.DrawRay
+
+
+
+
+
+
+
+很棒的用射线检测代替碰撞检测近战攻击的例子
+https://blog.csdn.net/wch3351028/article/details/122326021

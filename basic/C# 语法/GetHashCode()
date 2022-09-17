@@ -1,0 +1,18 @@
+GetHashCode函数一般是在操作HashTable或者Dictionary之类的数据集的时候被调用，目的是产生一个Key，为了方便在 HashTable或者 Dictionary中的检索。
+每个类型，不管是值类型还是引用类型，都提供这个基本函数，
+同样也可以像重写ToString或者Equals函数一样去重写它。但是不建议重写此函数，而且在使用这个函数也需要加倍小心。
+
+
+例子：
+public Transform[] Points; //在editor里赋值
+for (int i = 0; i < Points.Length; i++)
+{
+    dic_lastPoints.Add(Points[i].GetHashCode(), Points[i].position);
+}
+for (int i = 0; i < points.Length; i++)
+{
+  var nowPos = points[i]; 
+  dic_lastPoints.TryGetValue(nowPos.GetHashCode(), out Vector3 lastPos); 
+  dic_lastPoints[nowPos.GetHashCode()] = nowPos.position;//存入上个位置信息
+} 
+https://blog.csdn.net/wch3351028

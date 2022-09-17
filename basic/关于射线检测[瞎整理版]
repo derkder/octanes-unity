@@ -1,3 +1,5 @@
 ray&overlapbox(overlapsphere)
 
-然后可以用Gizmos.DrawRay模拟一下ray
+调试：
+Debug.DrawLine()函数和Debug.DrawRay()
+Gizmos.DrawRay

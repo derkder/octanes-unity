@@ -9,7 +9,7 @@ NetworkBehavoiur 是继承自 MonoBehaviour 的抽象类，用于网络实体之
 一、NetworkVariable[周期性地同步、只有服务端能写，任何人能读]
 NetworkVariable 的状态会被周期性地同步（复制）到所有连接到服务端的客户端里，当一个新的客户端加入连接后，其他客户端的 NetworkVariable 的最新状态会被同步到新的客户端。
 NetworkVariable 的权限是服务端能写，任何人能读。这意味着只有服务端才有修改 NetworkVariable 的能力，然后客户端能够通过网络同步读取到更新后的 NetworkVariable
-二、RPC【客户端可以借助服务器能写的权限来改变自己的 NetworkVariable】
+二、RPC【客户端可以借助服务器能写的权限来改变自己的 NetworkVariable】【RPC是远程过程调用（Remote Procedure Call）的缩写形式】
 客户端通过网络从服务端中请求改变自己 Player 的位置。
 Netcode 有两种 RPC 请求方式：ServerRpc 和 ClientRpc
 ServerRpc 就是客户端发送 RPC 到服务端。比如客户端针对一个 Network Object 向服务端发送 RPC，这个 RPC 会先被保存到本地的队列，然后被发送至服务端。

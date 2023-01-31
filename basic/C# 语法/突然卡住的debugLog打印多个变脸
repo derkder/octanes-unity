@@ -1,0 +1,3 @@
+tring logTest = "";
+logTest = (pos.x + "," + pos.y + "," + pos.z );
+Debug.Log(logTest);

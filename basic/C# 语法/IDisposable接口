@@ -1,0 +1,2 @@
+在Net中，由GC垃圾回收线程掌握对象资源的释放，程序员无法掌控析构函数的调用时机。对于一些非托管资源，比如数据库链接对象等，需要实现IDisposable接口进行手动的垃圾回收。
+https://www.cnblogs.com/tiancai/p/6612444.html

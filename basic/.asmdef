@@ -1,3 +1,4 @@
 对应新功能：程序集定义文件（Assembly Definition File），下面文中我们就简称ADF
 得益于此功能，开发者可以在一个文件夹中自定义程序集。定义明晰的依赖关系，可以确保脚本更改后，只会重新生成必需的程序集，减少编译时间
 https://zhuanlan.zhihu.com/p/139090680
+https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html

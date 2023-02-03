@@ -3,6 +3,11 @@ https://www.zhihu.com/question/534297314/answer/2817560398
 与微软的.NET Framework（共通语言运行平台）不同，Mono项目不仅可以运行于Windows系统上，还可以运行于Linux，FreeBSD，Unix，OS X和Solaris，甚至一些游戏平台
 
 
+
+1.5 IL(Intermediate Language)&CIL(Common Intermediate Language)
+
+
+
 2、IL2CPP
 :IL2CPP,把IL转成静态的c++代码文件,由本地编译器编译成二进制机器指令。由于C#这样的高级语言都有垃圾回收等机制，所以IL转成静态的c++代码后,还有一个IL2CPP的
 runtime(IL2CPP VM)用来支撑这些高级语言特性。通过IL2CPP技术，我们IL代码转成本地机器码，获得很好的性能。Unity也采用了这个技术,用unity开发的C#代码可以

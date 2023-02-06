@@ -14,12 +14,10 @@ static void OldMethod()
 {
     Concole.WtireLine("Old Method.");
 }
-
 static void NewMethod()
 {
     Concole.WtireLine("New Method.");
 }
-
 static void Main()
 {
     OldMethod();//也是可以调用的，不过编译器会提示：该方法已被弃用，请使用NewMethod代替

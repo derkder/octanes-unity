@@ -5,6 +5,7 @@ https://www.zhihu.com/question/534297314/answer/2817560398
 
 
 1.5 IL(Intermediate Language)&CIL(Common Intermediate Language)
+在unity中，IL与CIL是一个同一个东西，它是一种属于通用语言架构和.net框架的低阶的编程语言。CIL是完全基于堆栈的，运行的.net虚拟机上
 
 
 

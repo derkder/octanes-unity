@@ -1,0 +1,31 @@
+特性：
+特性(attribute)是一种允许我们向程序的程序集增加元数据的语言结构。它是用于保存程序结构信息的某种特殊类型的类。
+Obsolete特性：
+一个程序可能在其生命周期中经历多次发布，而且很可能延续多年。在程序生命周期的后半部分，程序员经常需要编写类似功能的新方法替换老方法。处于多种原因，
+你可能不再使用哪些调用过时的旧方法的老代码。而只想用新编写的代码调用新方法。旧的方法不能删除，因为有些旧代码也使用的旧方法，那么如何提示程序员使用新代码呢？
+可以使用Obsolete特性将程序结构标注为过期的，并且在代码编译时，显示有用的警告信息。
+
+
+
+
+//Obsolete特性用来表示一个方法被弃用了，并显示有用的警告信息
+[Obsolete("该方法已被弃用，请使用NewMethod代替")]
+static void OldMethod()
+{
+    Concole.WtireLine("Old Method.");
+}
+
+static void NewMethod()
+{
+    Concole.WtireLine("New Method.");
+}
+
+static void Main()
+{
+    OldMethod();//也是可以调用的，不过编译器会提示：该方法已被弃用，请使用NewMethod代替
+    //输出为：
+    //Old Method
+}
+————————————————
+版权声明：本文为CSDN博主「WhiteJunior」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/lym940928/article/details/80550416

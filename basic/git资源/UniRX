@@ -3,3 +3,8 @@
 UniRx 是一个 Unity3D 的编程框架。它专注于解决时间上异步的逻辑，使得异步逻辑的实现更加简洁和优雅。
 UniRx 就是 Unity 版本的 Reactive Extensions，Reactive Extensions 中文意思是：响应式扩展，响应式指的是观察者和定时器，扩展指的是 LINQ 的操作符。
 Reactive Extensions 以擅长处理时间上异步的逻辑、以及极简的 API 风格而闻名。
+
+
+
+和UniTask的区别：
+UniRx是一个反应式扩展，能够以反应式方式解释逻辑，UniTask是一个异步编程库。

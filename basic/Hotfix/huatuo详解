@@ -18,3 +18,4 @@ runtime(IL2CPP VM)用来支撑这些高级语言特性。通过IL2CPP技术，�
 
 3、AOT
 AOT(Ahead of time)，AOT技术指的是将高级开发语言直接转成传统的编译型编程语言(如C/C++),再编译成机器指令代码在硬件上运行。IL2CPP可以成为AOT技术。
+

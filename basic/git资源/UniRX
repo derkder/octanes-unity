@@ -1,7 +1,7 @@
 协程的替代品？适用mvc、mvp框架
 基于观察者模式
 UniRx 是一个 Unity3D 的编程框架。它专注于解决时间上异步的逻辑，使得异步逻辑的实现更加简洁和优雅。
-UniRx 就是 Unity 版本的 Reactive Extensions，Reactive Extensions 中文意思是：响应式扩展，响应式指的是观察者和定时器，扩展指的是 LINQ 的操作符。
+UniRx 是一个响应式框架，就是 Unity 版本的 Reactive Extensions，Reactive Extensions 中文意思是：响应式扩展，响应式指的是观察者和定时器，扩展指的是 LINQ 的操作符。
 Reactive Extensions 以擅长处理时间上异步的逻辑、以及极简的 API 风格而闻名。
 
 

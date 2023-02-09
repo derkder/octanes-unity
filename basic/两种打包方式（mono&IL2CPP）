@@ -1,0 +1,18 @@
+Mono 介绍：
+Mono打包后文件中存在大量动态链接库文件（.dll后缀文件），也包括mono虚拟机文件（libmonobdwgc-2.0.so和libMonoPosixHelper.so），在运行程序时dll文件会加载到mono虚拟机中
+Mono脚本编译流程：
+在Unity编译打包时，使用C#书写的脚本会经过Mono的C#编译器打包为中间语言IL（Intermediate Language，IL语言所在的文件就是.dll后缀的文件），然后和其他dll文件一起在Mono虚拟机
+（Mono VM，Mono Virtual Machine）中运行。中间语言IL的存在主要是为了平台的兼容性，因为不同指令集平台执行同样的程序的具体机器语言并不是相同的，如果打包时直接将程序翻译为机器语言，
+那么打包后的程序包就只能在指定平台上运行，所以我们在打包时先将程序编译为中间语言IL，在不同的平台上使用Mono虚拟机(不同平台有自己的虚拟机，这个mono就很牛逼，做了很多平台的vm)
+将IL相应地翻译为该平台的机器语言执行。
+
+
+
+IL2CPP 介绍：
+IL2CPP 是 Unity 自 4.6.1p5版本 新的 scripting backend 方式，为Unity提供了更加高效、更加便携的虚拟机。IL2CPP打包后没有了dll文件，Unity主工程的dll文件（Assembly-CSharp.dll）
+和Mono虚拟机文件集成为IL2CPP虚拟机文件（libil2cpp.so）。
+IL2CPP主要由两部分组成：
+1.AOT静态编译编译器（il2cpp.exe），将IL转换为C++源码，再交给各平台的C++编译器进行编译，达到平台兼容的目的
+2.运行时库（libil2cpp），运行时库则会提供诸如垃圾回收、线程/文件获取、内部调用直接修改托管数据结构的原生代的服务与抽象
+
+

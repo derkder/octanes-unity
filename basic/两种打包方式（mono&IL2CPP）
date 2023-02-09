@@ -14,5 +14,15 @@ IL2CPP 是 Unity 自 4.6.1p5版本 新的 scripting backend 方式，为Unity提
 IL2CPP主要由两部分组成：
 1.AOT静态编译编译器（il2cpp.exe），将IL转换为C++源码，再交给各平台的C++编译器进行编译，达到平台兼容的目的
 2.运行时库（libil2cpp），运行时库则会提供诸如垃圾回收、线程/文件获取、内部调用直接修改托管数据结构的原生代的服务与抽象
+IL2CPP 脚本编译流程
+在Unity编译打包时，IL2CPP模式同样先将工程中的文件编译为IL，但是IL2CPP不会直接在虚拟机中运行这些IL，而是将工程IL和其他IL一起使用IL2CPP将这些IL变回CPP代码，
+然后再将C++代码放到本地编译器（具体运行的机器平台的编译器）上编译为能执行的原生汇编代码，再使用自研IL2CPP VM运行。
 
 
+
+
+总结
+unity mono和il2cpp真的完全两种路子，mono是基于开源的mono，我将c# 语言转为IL，然后其在各个平台都实现了CLR（用于运行IL），可以运行IL，就这么简单粗暴，类似Java
+另外一种是il2cpp自研方式，我还是利用mono将c# 转为IL，然后就不一样了，我将IL转成cpp代码，如将dll转为cpp代码。。。然后利用各个平台编译cpp代码的轮子编译cpp代码，
+再造一个vm可以进行垃圾回收等等操作，我不在.net平台上玩了
+https://blog.csdn.net/qq_22849251/article/details/126683374

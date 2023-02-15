@@ -9,3 +9,14 @@ https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html
 
 Assembly:
 表示由 Unity 编译的程序集的类。
+
+
+
+
+
+2023.2.15
+程序集介绍：
+文件夹里如果加了程序集，这个文件夹里的代码，就属于这个程序集。
+每个代码文件属于的程序集，取决于它的文件夹，或者最近的父文件夹
+程序集引用：
+可以让多个不同的文件夹，属于同一个程序集

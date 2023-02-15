@@ -1,0 +1,4 @@
+https://docs.unity3d.com/es/2018.4/Manual/WindowsPlayerIL2CPPBuildProducedFiles.html
+a_Data：	包含游戏数据的文件夹
+UnityPlayer.dll：	包含所有本机代码的 Unity Player 库。
+GameAssembly.dll	包含 IL2CPP 运行时和所有脚本代码的库。

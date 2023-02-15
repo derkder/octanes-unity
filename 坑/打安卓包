@@ -10,3 +10,9 @@ https://blog.csdn.net/sunrui13075553500/article/details/125166036
 
 对于.lock简单粗暴的解决方案，什么不对删什么
 https://stackoverflow.com/questions/47083990/accessdeniedexception-how-do-i-handle-this-error
+
+
+
+
+如果build可以，build and run不行
+手机里之前已经下载过这个工程的包，需要删掉再在电脑上build and run

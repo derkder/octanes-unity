@@ -1,0 +1,3 @@
+例如
+BaseCapture里面的virtual void UpdateFrame()里面写通用的方法
+然后继承他的子类CaptureFromCamera以及CaptureFromScreen里面写public override void UpdateFrame()然后里面的东西写自己的逻辑，用到父类的就写base.UpdateFrame()

@@ -1,2 +1,0 @@
-https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@10.7/manual/InstallURPIntoAProject.html
-通用渲染管道（URP）的目标是为开发人员提供优化的性能，这些开发人员可以针对实时照明需求有限的各种平台，VR和游戏。它通过在照明和阴影方面做出一些权衡来做到这一点。 

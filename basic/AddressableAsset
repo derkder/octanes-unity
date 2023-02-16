@@ -1,1 +1,9 @@
+Addressable Asset System 允许开发者通过资源的地址来请求资源。资源（例如预制件）标记为“可寻址”后，就会生成一个可从任何地方调用的地址。
+无论资源位于何处（本地还是远程），系统都会找到资源及其依赖项，然后将其返回。
 
+
+Addressables 使用异步加载来支持从具有任何依赖关系集合的任何位置进行加载。无论您一直以来使用的是直接引用、传统资源包还是 Resource 文件夹，
+Addressables 都提供了一种使游戏更具动态性的简单方法。Addressables 同时开启了资源包的世界，并会管理所有复杂性。
+
+
+github.com/Unity-Technologies/Addressables-Sample

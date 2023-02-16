@@ -1,3 +1,4 @@
-通用渲染管线 (Universal Render Pipeline, URP) 是由 Unity 开发的预构建可编程渲染管线 (Scriptable Render Pipeline)。URP 提供了对美术师友好的工作流程，
+https://zhuanlan.zhihu.com/p/353687806
+通用渲染管线 (Universal Render Pipeline, URP) 是由 Unity 开发的预构建可编程渲染管线 (Scriptable Render Pipeline,SRP)。URP 提供了对美术师友好的工作流程，
 可让您在移动平台、高端游戏主机和 PC 等各种平台上快速轻松地创建优化的图形。
 

@@ -1,0 +1,4 @@
+使用AVPro Video拉m3u8直播流的时候遇到的，editor下https和http都支持，安卓实机只支持前者
+解决：
+https://blog.csdn.net/weixin_43908355/article/details/118669356 先按照这里的第一步修改
+https://blog.csdn.net/xunideshijie/article/details/121517374 再按照这里后面的“另外Unity 也要进行一点其他设置”修改

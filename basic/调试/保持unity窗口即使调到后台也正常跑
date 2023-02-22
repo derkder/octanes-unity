@@ -2,4 +2,5 @@ player setting
 resolution and presentation里的resolution
 run in background勾上
 
-对应script里的Application.runInBackground
+更改：对应script里的Application.runInBackground
+查看：Application.isFocused

@@ -1,0 +1,3 @@
+https://blog.csdn.net/hack_yin/article/details/125205274
+adb install -r abc.apk 覆盖安装
+adb logcat -s Unity 专门获得Unity相关的日志

@@ -1,3 +1,13 @@
 https://blog.csdn.net/hack_yin/article/details/125205274
 adb install -r abc.apk 覆盖安装
 adb logcat -s Unity 专门获得Unity相关的日志
+
+
+logcat：-- V : Verbose (明细);
+    -- D : Debug (调试);
+    -- I : Info (信息);
+    -- W : Warn (警告);
+    -- E : Error (错误);
+    -- F : Fatal (严重错误);
+    -- S : Silent(Super all output) (最高的优先级, 可能不会记载东西);
+https://miaojiang.blog.csdn.net/article/details/80371708

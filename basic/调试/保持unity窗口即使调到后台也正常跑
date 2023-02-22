@@ -1,3 +1,5 @@
 player setting
 resolution and presentation里的resolution
 run in background勾上
+
+对应script里的Application.runInBackground

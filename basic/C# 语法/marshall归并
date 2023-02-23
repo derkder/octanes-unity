@@ -2,5 +2,12 @@ https://blog.csdn.net/liuhhaiffeng/article/details/76069023
 什么是marshall：
   marshall是将一个对象的内存表示转换为另一种格式的过程，这种格式适合于存储或传输给其他软件应用。通过将一个对象转换为序列化的形式，Marshalling允许远程对象之间的通信。
 MarshalAs属性:
-指示如何在托管代码和非托管代码之间封送数据。
-使用方法：[MarshalAs(UnmanagedType unmanagedType, 命名参数)],实际上相当于构造一个MarshalAsAttribute类的对象
+  指示如何在托管代码和非托管代码之间封送数据。
+  使用方法：[MarshalAs(UnmanagedType unmanagedType, 命名参数)],实际上相当于构造一个MarshalAsAttribute类的对象
+托管/非托管:
+  是微软的.net framework中特有的概念。
+  非托管代码：也叫本地（native）代码。
+  托管代码：是由公共语言运行库（CLR）执行的代码，而不是由操作系统直接执行。本地代码经过两次编译，第一次将源代码编译成中间代码（MSIL，MicrosoftIntermediate Language），
+  第二次由.net中的CLR将中间代码编译成机器代码。程序实际上是被“托管”在公共语言运行库中。随着程序集的运行，公共语言运行库会持续地提供各种服 务，例如内存管理、安全管理、
+  线程管理等等。和托管资源/非托管资源不同，不要弄混。
+  https://blog.csdn.net/qq_18975227/article/details/109818550

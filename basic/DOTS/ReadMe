@@ -1,2 +1,6 @@
-Data oriented teechnology stack
+Unity面向数据的技术栈(data oriented tech stack, DOTS)包括以下主要部分：
+  Entity Component System 简记为ECS，提供了默认情况下写出高性能的代码的方法
+  C# Job System 提供了以并行的方式在多核CPU上运行游戏代码的方法
+  Burst compiler 一个math-aware，后端编译器(backend compiler)，能产生高度优化的机器码(highly optimized machine code)
+
 https://unity.com/dots

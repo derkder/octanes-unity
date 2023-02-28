@@ -1,0 +1,1 @@
+通用渲染管线 (Universal Render Pipeline, URP) 使用体积 (Volume) 框架。体积可以根据摄像机相对于每个体积的位置来覆盖或扩展场景属性。

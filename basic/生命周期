@@ -8,3 +8,11 @@ OnGUI：每帧多次，处理GUI事件->
 OnDisable：与OnEable对应，激活转为非激活时调用，处理非激活的逻辑->
 OnDestroy：对象销毁时调用，处理垃圾->
 OnApplicationQuit：程序退出时调用
+
+
+fixedUpdate：
+在FixedUpdate中，我们常用Time.fixeddeltaTime，这是一个固定的值，可以在Edit->ProjectSetting->time —>Fixedtimestep中设置。所以，FixedUpate每秒调用次数是一定的，
+但每帧调用的次数不是一定的，因游戏中每帧时间不一样。
+
+Unity中默认fixeddeltaTime为0.02秒，但FixedUpdate并不是真的就0.02秒调用一次。因为在脚本的生命周期内，FixedUpdate处有一个小循环，这个循环也是通过物理时间累积看是不是
+大于0.02了，然后调用一次。有很多物体都进行物理更新，那么FixedUpdate的调用也会慢下来。

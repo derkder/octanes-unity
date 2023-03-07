@@ -1,3 +1,8 @@
+unity urp本身就支持2d光照的阴影（而且是urp独占）
+
+
+
+
 简单：
 Unity2d动态影子
 1、首先创建自己准备阴影的物体，给它加上Rigidbody2d组件，将Body type属性选择Kinematic

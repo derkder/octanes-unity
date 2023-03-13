@@ -1,0 +1,9 @@
+背景：
+项目中本来存在三个引用流的程序集，其中xxsystem.cs与命名空间UnityEngine.InputSystem【对应插件InputSystem】都在system程序集下，
+但是当我加入这个插件的sample（InputRecorder）并对应添加命名空间UnityEngine.InputSystem下的InputRecorder类中的函数时，无法引用
+
+
+原因解决：
+虽然InputRecorder类属于插件InputSystem下，也在对应插件的InputSystem命名空间中，
+但是他只是强制InputRecorder在InputSystem命名空间，前者并不在后者的程序集中，而是有自己单独的程序集
+所以在system程序集下加入InputRecorder自己的程序集就可以了

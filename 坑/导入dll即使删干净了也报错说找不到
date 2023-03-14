@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/69507088/microsoft-c-sharp-compiler-error-with-no-error-description
+报错：
+    Microsoft (R) Visual C# Compiler version 3.5.0-dev-20359-01 (8da8ba0c)
+    Copyright (C) Microsoft Corporation. All rights reserved.
+    
+    
+解决：
+重启（正常是改.net,但是in my case，重启）

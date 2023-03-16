@@ -1,4 +1,16 @@
 UnityWebRequest 生态系统将 HTTP 事务分解为三个不同的操作：
-向服务器提供数据[UpLoadHandler]
-从服务器接收数据[DownLoadHandler]
-HTTP 流量控制（例如，重定向和错误处理）
+  向服务器提供数据[UpLoadHandler]
+  从服务器接收数据[DownLoadHandler]
+  HTTP 流量控制（例如，重定向和错误处理）
+  
+ 
+对于任何 HTTP 事务，正常的代码流程如下：
+  创建 Web 请求对象
+  配置 Web 请求对象
+    设置自定义标头
+    设置 HTTP 动词（例如 GET、POST 和 HEAD - 除 Android 之外的所有平台都允许使用自定义动词）
+    设置 URL *（可选）创建上传处理程序并将其附加到 Web 请求
+    提供要上传的数据
+    提供要上传的 HTTP 表单 *（可选）创建下载处理程序并将其附加到 Web 请求
+  发送 Web 请求
+    如果在协程中，可获得 Send() 调用的结果以等待请求完成 （可选）读取从下载处理程序接收的数据 （可选）从 UnityWebRequest 对象中读取错误信息、HTTP 状态码和响应标头

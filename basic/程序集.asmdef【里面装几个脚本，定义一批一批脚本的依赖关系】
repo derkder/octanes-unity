@@ -20,3 +20,7 @@ Assembly:
 每个代码文件属于的程序集，取决于它的文件夹，或者最近的父文件夹
 程序集引用：
 可以让多个不同的文件夹，属于同一个程序集
+
+
+assembly definition：放在文件夹里，这样这个文件夹都属于当前新建的这个程序集了
+assembly definition reference：放在文件夹里，上面再说自己是assembly definition x的reference，这样这个文件夹里的都属于assembly definition x

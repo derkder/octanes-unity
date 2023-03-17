@@ -5,3 +5,10 @@ event：
 函数：
   OnResultEvent+=CurrentResultEvent[这是一个函数]；
 这样子每次OnResultEvent?.Invoke(a,b,c);就会唤醒OnResultEvent事件+=过的函数并给它参数，注意后面还要-=，然后还会把参数传递给他
+
+
+
+对于event的简单用法，上面是需要指定event激活的函数的参数格式的，这里和action结合下就好,就不能传参了
+public event action OnResultReceived;
+OnResultReceived+=CurrentResultEvent[这是一个函数];
+OnResultReceived?.Invoke

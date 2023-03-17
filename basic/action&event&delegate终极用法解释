@@ -1,3 +1,13 @@
+对于event的简单用法，下面是需要指定event激活的函数的参数格式的，这里和action结合下就好,貌似就不能传参了
+public event action OnResultReceived;
+OnResultReceived+=CurrentResultEvent[这是一个函数];
+OnResultReceived?.Invoke
+
+
+
+
+
+
 delegate：
   public delegate void OnResultDelegate(int x, string y, float z);
 event：
@@ -8,7 +18,3 @@ event：
 
 
 
-对于event的简单用法，上面是需要指定event激活的函数的参数格式的，这里和action结合下就好,就不能传参了
-public event action OnResultReceived;
-OnResultReceived+=CurrentResultEvent[这是一个函数];
-OnResultReceived?.Invoke

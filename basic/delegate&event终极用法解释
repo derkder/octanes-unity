@@ -1,0 +1,7 @@
+delegate：
+  public delegate void OnResultDelegate(int x, string y, float z);
+event：
+  public event OnResultDelegate OnResultEvent;
+函数：
+  OnResultEvent+=CurrentResultEvent[这是一个函数]；
+这样子每次OnResultEvent?.Invoke();就会唤醒OnResultEvent事件+=过的函数，注意后面还要-=，然后还会把参数传递给他

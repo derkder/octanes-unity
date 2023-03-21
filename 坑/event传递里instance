@@ -6,7 +6,7 @@
         {
             if (null == instance)
             {
-                GameObject go = GameObject.Find("Characters/Dino");
+                GameObject go = GameObject.Find("Characters/Dino");//future self
                 if (null != go)
                 {
                     instance = go.GetComponent<PlayerMovement>();
@@ -22,7 +22,7 @@
  原因大概是因为在hierarchy窗口里是在父类下面的，直接写找不到
  
 //感谢库巴老人家的倾情帮助
-
+//future self:这里也千万不可以new一个出来，因为其实场景里都有的，再new一个相当于新创建一个，参数都初始化了，要找的
 
 
 

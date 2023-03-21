@@ -5,5 +5,8 @@ StreamingAssets：
   Android平台下一般是通过过WWW类来读取。
   
   
+  实际应用：
+    里面可以放视频、config、appkey这些
+  
   
   https://docs.unity3d.com/cn/current/Manual/StreamingAssets.html

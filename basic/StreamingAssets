@@ -1,0 +1,9 @@
+StreamingAssets：
+  只读不可写。
+  Unity 会将放置在 Unity 项目中名为 StreamingAssets__（区分大小写）的文件夹中的所有文件逐字复制到目标计算机上的特定文件夹。[保持原始格式]
+  主要用来存放二进制文件。
+  Android平台下一般是通过过WWW类来读取。
+  
+  
+  
+  https://docs.unity3d.com/cn/current/Manual/StreamingAssets.html

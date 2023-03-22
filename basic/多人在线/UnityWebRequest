@@ -15,3 +15,6 @@ UnityWebRequest 生态系统将 HTTP 事务分解为三个不同的操作：
     提供要上传的 HTTP 表单 *（可选）创建下载处理程序并将其附加到 Web 请求
   发送 Web 请求
     如果在协程中，可获得 Send() 调用的结果以等待请求完成 （可选）读取从下载处理程序接收的数据 （可选）从 UnityWebRequest 对象中读取错误信息、HTTP 状态码和响应标头
+
+
+https://zhuanlan.zhihu.com/p/63185575

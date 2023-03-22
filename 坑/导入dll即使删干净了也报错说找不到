@@ -6,3 +6,6 @@ https://stackoverflow.com/questions/69507088/microsoft-c-sharp-compiler-error-wi
     
 解决：
 重启（正常是改.net,但是in my case，重启）
+
+
+后面找不到那里报的warning也是一个道理

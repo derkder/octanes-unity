@@ -1,0 +1,11 @@
+不一定真正解决了
+
+就是cinemachine virtual camera调整成same as follow target的时候，多转25度还抽搐
+
+
+给damping赋值
+
+CinemachineSameAsFollowTarget是Cinemachine中的一个组件，它可以将摄像机的某些属性设置为与跟随对象相同。其中，damping是CinemachineSameAsFollowTarget的一个属性，它表示在跟随对象移动时，摄像机属性的平滑度。
+具体来说，damping值越高，摄像机的移动就会越平滑，也就是运动越缓慢，反之，damping值越低，摄像机的移动就会越快，也就是运动越突兀。
+例如，当跟随对象在移动时，如果damping值较高，则摄像机跟随对象的移动会更平滑，不会有太大的晃动或抖动，但是可能会有一些延迟；如果damping值较低，则摄像机会更快地跟随对象的移动，但是可能会有一些抖动或过度调整。
+因此，在设置CinemachineSameAsFollowTarget组件的damping值时，需要根据具体情况进行调整，以获得最佳的跟随效果。

@@ -26,3 +26,4 @@ https://zhuanlan.zhihu.com/p/63185575
 在实际应用中，就是解析了liscense的json文件，然后uploader上去，然后downloader一个东西下来做授权
 实际上还是用了个现成的proyecto26/RestClient库去上传文本收到数据，其中上传到的数据的头要包含appkey或者liscense里解析出来的apikey
 不不不，上面的proyecto26/RestClient也是建立在UnityWebRequest上的封装，使用promises让http传输更稳健
+所以实际每一次传输都需要UnityWebRequest的uploader啥的

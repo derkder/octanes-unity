@@ -18,3 +18,10 @@ UnityWebRequest 生态系统将 HTTP 事务分解为三个不同的操作：
 
 
 https://zhuanlan.zhihu.com/p/63185575
+
+
+
+
+
+在实际应用中，就是解析了liscense的json文件，然后uploader上去，然后downloader一个东西下来做授权
+实际上还是用了个现成的proyecto26/RestClient库去上传文本收到数据

@@ -1,3 +1,6 @@
 Animator Controller中参数类型bool和trigger的区别是什么？分别在何种情况下使用？
 
 其实二者最大的区别是动作复原，settrigger设置动作后，它会自动复原，而bool是需要将再其设置成false，需手动操作。就是需要你自动控制的时候用trigger，手动的时候需要bool。
+
+
+没有reset上一个动作trigger貌似就不能set这一个动作trigger

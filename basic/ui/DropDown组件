@@ -1,0 +1,4 @@
+https://blog.csdn.net/a1208498468/article/details/117510552
+其中子物体Template是一个ScrollView控件
+当用户在运行状态下点击Dropdown，会复制Template创建一个名为Dropdown List的ScrollView。
+Dropdown List与Template的区别在于Content中的item，Template的Content只有一个item作为模板而存在，而Dropdown List的Content中的item是根据选项自动对应创建的。

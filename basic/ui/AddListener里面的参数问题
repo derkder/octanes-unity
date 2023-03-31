@@ -1,0 +1,5 @@
+上面的可以下面的不行
+myButton.onClick.AddListener(() => MyFunction(myString));
+myButton.onClick.AddListener(MyFunction(myString));
+
+

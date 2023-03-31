@@ -1,5 +1,12 @@
+1、自适应组件ContentSizeFilter
 可以根据里面的文字多少自适应大小
 根据子节点自适应
 但应该horizental和vertical不能都填preferred size
 
 没有具体看过，因为我要回家了
+
+
+
+
+2、对于inputfield
+抽象描述法：  text input的linetype： multiline submit  并且把text的区域拉大

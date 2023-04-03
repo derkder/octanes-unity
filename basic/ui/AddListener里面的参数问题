@@ -3,3 +3,5 @@ myButton.onClick.AddListener(() => MyFunction(myString));
 myButton.onClick.AddListener(MyFunction(myString));
 
 
+因为AddListener中参数只能传递 没有参数的函数体
+第一种相当于传递的没有参数的匿名函数，但这个匿名函数的函数体是这个带参数的函数体MyFunction(myString)，所以可以

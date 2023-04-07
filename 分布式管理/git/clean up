@@ -8,3 +8,9 @@ svn中，cleanup就是清除缓存，
 
 
 https://blog.csdn.net/weixin_48910529/article/details/119171822
+
+
+
+
+git clean 不干净：
+“untracked files clean问题，我试了使用界面tortoise git clean 是clean 不干净的，要用git bash里面 输入命令 git clean -d -f 删除”

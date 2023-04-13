@@ -1,0 +1,2 @@
+GPU usage行的drawcalls数等于rendering行的setpass call【见了鬼了】
+rendering行的drawcalls数等于rendering行的batches数【合理】

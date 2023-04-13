@@ -1,2 +1,5 @@
 GPU usage行的drawcalls数等于rendering行的setpass call【见了鬼了】
+
+
 rendering行的drawcalls数等于rendering行的batches数【合理】【然而https://docs.unity3d.com/cn/current/Manual/ProfilerRendering.html可以看出来并不等于】【想了想也觉得不等于是合理的】
+这个主要还是被chatgpt演了，drawcall肯定的大于batches数

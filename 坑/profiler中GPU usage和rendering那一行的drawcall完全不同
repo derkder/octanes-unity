@@ -1,4 +1,5 @@
 GPU usage行的drawcalls数等于rendering行的setpass call【见了鬼了】
+GPU usage中的drawcall数只是此帧中调用drawcall函数的次数。而rendering那一行的drawcall是真正的drawcall数
 
 
 rendering行的drawcalls数等于rendering行的batches数【合理】【然而https://docs.unity3d.com/cn/current/Manual/ProfilerRendering.html可以看出来并不等于】【想了想也觉得不等于是合理的】

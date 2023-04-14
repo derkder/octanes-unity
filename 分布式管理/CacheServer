@@ -1,0 +1,8 @@
+https://blog.csdn.net/qq_52855744/article/details/128162203
+
+CacheServer是什么？
+  CacheServer是Unity提供的一个高速缓存服务器，用于存储导入到项目中的资源数据。分为Local和Remote两种模式。
+  
+CacheServer其实就是一个高速缓存服务器。
+  Unity的做法就是把修改之后的内部文件上传到CacheServer（比如上面的小B和小C），这样，当小A更新资源的时候，Unity检测到B和C被修改并且查找到CacheServer存在B和C资源的内部文件时，
+  直接从CacheServer下载就行了，而不需要重新由Unity进行生成了，大大加速了更新效率。

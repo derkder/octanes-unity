@@ -1,0 +1,16 @@
+在文件夹的地址栏中输入"cmd"并按下回车键：在文件夹的地址栏中键入“cmd”，然后按下回车键。这将在当前文件夹位置打开命令提示符窗口。
+ 
+打开txt输入：
+  mklink /d C:\MyProject\yaotai_dev_cp\Assets C:\MyProject\yaotai_dev\Assets
+  mklink /d C:\MyProject\yaotai_dev_cp\Library C:\MyProject\yaotai_dev\Library
+  mklink /d C:\MyProject\yaotai_dev_cp\Packages C:\MyProject\yaotai_dev\Packages
+  mklink /d C:\MyProject\yaotai_dev_cp\ProjectSettings C:\MyProject\yaotai_dev\ProjectSettings
+  。。。。。。
+  
+直接将上面的输入在命令提示符窗口或者另存为bat格式用管理员身份打开
+
+
+
+
+其中/d是软链接，/j是硬链接
+

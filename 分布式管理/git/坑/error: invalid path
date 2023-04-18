@@ -1,3 +1,3 @@
-我以为是路径中不能包含中文呢
+我以为是路径中不能包含中文呢，其实是不能有:这种符号
 实际上git bash里输入 git config core.protectNTFS false 就可以了
 https://www.cnblogs.com/vickylinj/p/15634405.html

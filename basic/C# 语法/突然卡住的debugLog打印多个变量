@@ -1,3 +1,7 @@
 tring logTest = "";
 logTest = (pos.x + "," + pos.y + "," + pos.z );
 Debug.Log(logTest);
+
+
+在参数前加$ 在变量外加{}
+Debug.Log($"物体 【{curPrefab.name}】 上有Missing的脚本");

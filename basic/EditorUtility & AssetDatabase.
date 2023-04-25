@@ -1,0 +1,5 @@
+`UnityEditor.EditorUtility.SetDirty`
+  是Unity编辑器中的一个静态方法，用于标记场景或资源已经被修改，需要进行保存。当标记场景或资源后，Unity编辑器会在下次保存时将这些修改写入磁盘。
+  
+AssetDatabase.SaveAssetIfDirty
+  用于将指定的资源保存到磁盘上

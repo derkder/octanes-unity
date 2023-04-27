@@ -1,0 +1,6 @@
+背景：
+  webGL不支持原来的c++ 的dll库，说是要换成WebAssembly
+
+
+Assembly 是指汇编代码，是直接操作 CPU 的指令代码
+WebAssembly 可以看做是 Web 平台的 x86 硬件通用指令集，作为一层中间语言，上层对接 Java、Python、Rust、Cpp，让这些语言都能编译成统一的格式，用于 Web 平台运行。

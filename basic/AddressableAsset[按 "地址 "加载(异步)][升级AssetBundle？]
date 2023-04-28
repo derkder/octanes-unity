@@ -19,3 +19,11 @@ github.com/Unity-Technologies/Addressables-Sample
 实习遇到的：
   用下来感觉就是prefab标记成Addressable
   这样就可以在程序中通过这个prefab的地址取动态生成了
+
+
+实际使用背景：
+  微信小程序webgl首包只能5m，所以最好build只build开始界面，其他的场景通过放到云端的方式使用aa去加载
+
+
+打AA包最强攻略：（背景：微信小程序）：
+  https://blog.csdn.net/linxinfa/article/details/122390621

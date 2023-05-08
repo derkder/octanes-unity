@@ -1,0 +1,4 @@
+https://www.bilibili.com/video/BV1M84y1b7av/?spm_id_from=333.788&vd_source=e8aced2efacfdf00ea86c163e5a40efc
+
+1、当打aa包时，首包资源也要放在官方cdn里面，需要放入的内容：https://github.com/wechat-miniprogram/minigame-unity-webgl-transform/blob/main/Design/DataCDN.md
+2、aa包打包的方法为：https://github.com/wechat-miniprogram/minigame-unity-webgl-transform/blob/main/Design/UsingAddressable.md

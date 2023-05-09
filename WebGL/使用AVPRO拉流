@@ -1,0 +1,8 @@
+限定webgl，小程序没成功，只能unity脚本调用微信小游戏引擎脚本的video方法
+
+
+一个是按照官方的在build赛文件，给index头插入:
+  <script src="Build/hls.min.js"></script>
+
+一个是把打出的包来放在在iis上防止cors：
+  https://blog.csdn.net/qq_41084756/article/details/124879167（用这个链接还是有前置条件的，需要csdn再搜下）

@@ -8,3 +8,15 @@ WebAssembly 可以看做是 Web 平台的 x86 硬件通用指令集，作为一�
 
 
 https://zhuanlan.zhihu.com/p/68048524
+
+
+
+
+
+
+WebAssembly和JavaScript的关系：【协同】
+  WebAssembly（WASM）和JavaScript（JS）都是在 Web 应用开发中的技术，它们之间有着一定的关系。
+  WebAssembly 和 JavaScript 都可以在 Web 浏览器中运行，但它们是两种不同的技术。JavaScript 是一种脚本语言，运行于浏览器的JavaScript引擎中。WebAssembly 是一种字节码，它提供了一种比 JavaScript 更高效的方式来运行计算密集型的任务。
+  WebAssembly 和 JavaScript 可以协同工作。WebAssembly 可以与 JavaScript 交互，这意味着可以在 Web 应用中同时使用两种技术。例如，可以使用 WebAssembly 来编写性能密集型的算法，然后将其与 JavaScript 一起使用，以实现更高效的 Web 应用。
+  WebAssembly 和 JavaScript 也可以一起使用，以便为 Web 应用开发提供更好的体验。WebAssembly 可以提供更高的性能，而 JavaScript 可以提供更好的交互性和动态性。使用 WebAssembly 和 JavaScript 的组合，可以为 Web 应用开发提供更多的选择和灵活性。
+  总之，WebAssembly 和 JavaScript 是两种不同的技术，但它们可以在 Web 应用中协同工作，以实现更高效、更灵活的 Web 应用开发。

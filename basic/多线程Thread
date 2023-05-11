@@ -1,0 +1,45 @@
+https://blog.csdn.net/weixin_41590778/article/details/129527679
+是数据库里那种
+using UnityEngine;
+using System.Threading;
+public class testScripts : MonoBehaviour
+{
+    Thread t1;
+    Thread t2;
+    string str = "";
+    void Start()
+    {
+        t1 = new Thread(T1);
+        t1.Start();
+        t2 = new Thread(T2);
+        t2.Start();
+        Thread.Sleep();
+        Debug.Log(str);
+    }
+
+    void T1()
+    {
+        lock (str)
+        {
+            for (int i = ; i < ; i++)
+            {
+                Thread.Sleep();
+                str += 'a';
+            }
+        }
+    }
+
+    void T2()
+    {
+        lock (str)
+        {
+            for (int i = ; i < ; i++)
+            {
+                Thread.Sleep();
+                str += 'b';
+            }
+        }
+    }
+
+}
+

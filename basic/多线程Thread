@@ -2,6 +2,9 @@ https://blog.csdn.net/weixin_41590778/article/details/129527679
 是数据库里那种
 不支持在新开的线程中操作UnityEngine SDK.
 而且苹果手机只有单线程
+协程就是为了代替线程的，协程是平级跑在同一线程里的
+【yield StartCoroutine(MyFunc); 连接协同程序，并等待 MyFunc coroutine 首先结束。
+也就是说，将代码段分散在不同的帧中，每次执行一段，下一帧再执行yield挂起的地方。这样看起来,就是多线程的效果.】
 
 using UnityEngine;
 using System.Threading;

@@ -1,5 +1,8 @@
 https://blog.csdn.net/weixin_41590778/article/details/129527679
 是数据库里那种
+不支持在新开的线程中操作UnityEngine SDK.
+而且苹果手机只有单线程
+
 using UnityEngine;
 using System.Threading;
 public class testScripts : MonoBehaviour

@@ -3,3 +3,6 @@
 所以只有这个好使（网上的妙招只支持6.0 2.0standard 2.1）
 直接下载下来塞到ThirdPlugins里
 把网上的方法的命名空间替换为using Unity.SharpZipLib.Zip;
+
+
+https://github.com/needle-mirror/com.unity.sharp-zip-lib

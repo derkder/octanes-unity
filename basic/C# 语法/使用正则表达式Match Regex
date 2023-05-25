@@ -1,0 +1,7 @@
+背景一大串以_为分割的字符串，分割到数字之后
+string pattern = @"_\d+";//表示_ + 数字（即使是两位数）
+Match match = Regex.Match(extractSavePath, pattern);
+if (match.Success)
+{
+    extractSavePath = extractSavePath.Substring(0,match.Index + match.Value.Length);
+}

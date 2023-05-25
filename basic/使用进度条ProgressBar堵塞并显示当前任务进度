@@ -1,0 +1,2 @@
+EditorUtility.DisplayProgressBar("正在下载", "下载" + savePath.Substring((savePath.Length - 4)/2) + "中", -1);//这里第三个参数为负数的话就是一个条在上面跑来跑去
+EditorUtility.ClearProgressBar();

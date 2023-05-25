@@ -1,5 +1,5 @@
 背景一大串以_为分割的字符串，分割到数字之后
-string pattern = @"_\d+";//表示_ + 数字（即使是两位数）
+string pattern = @"_\d+";//其中_表示下划线 其中\d表示数字字符，`\d+` 表示匹配一个或多个数字字符
 Match match = Regex.Match(extractSavePath, pattern);
 if (match.Success)
 {

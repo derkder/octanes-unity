@@ -1,0 +1,19 @@
+问题记录：
+在空场景显示，在项目场景不显示
+
+粗略解决：
+猜测是感觉原生canvs的问题
+对比两个场景的canvas，把项目的canvas从screenspace-cam换成screen space overlay就可以出来
+
+落手解决：
+第0种猜测：会不会是我一直没明白的canvas上挂的canvas group导致的：
+但是：运行时删了也不现实
+因此第一种猜测：因为原来canvas的screenspace-cam的cam是uicam，会不会是新加的插件只有maincam可以渲染出来，里面做了设置不渲染到uicam上
+但是：screen space overlay是一个像素点像素点渲染出来的，并不是maincam渲染出来的，所以猜测方式错误
+因此第二种猜测：因为是生成prefab而且加了网上找来的初始化，会不会position有问题，导致uicamera在图像之前，或者甚至uicamera看到的是图像背面
+但是：怎么调位置都没用，就是和它一个position的都显示出来了，它不显示
+因此第三种猜测：插件因为demo上canvas也是screen space overlay，会不会是因为它只支持这个不支持screenspace-cam
+但是：库巴又试了下，让我们一起大声说，谢谢库巴！！！
+即使真的是这个问题的解决方法：本来想的是如果打开这个canvas view就将canvas设成overlay关闭再改回来，但这个会导致初始化的东西消失。所以应该新生成一个overlay型的canvas，将当前webview的prefab挂上去
+因此第四种猜测：项目自己的管线不支持，所以把shader从他自己的vulplex/defaultwebview设置成项目普遍用的ui/default
+成了！！！！！！！

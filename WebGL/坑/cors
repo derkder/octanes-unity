@@ -1,4 +1,4 @@
 cors问题：
-  自己建立iis（开启chromae的cors插件貌似没用）
+  自己建立iis（开启chromae的cors插件貌似没用）(实际上有用，只是我当时是建立在本地的webgl项目访问网络，就不行，需要iis这种高阶的操作)
   建立方法：
     https://blog.csdn.net/qq_41084756/article/details/124879167（用这个链接还是有前置条件的，需要csdn再搜下）

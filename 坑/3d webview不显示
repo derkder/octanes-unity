@@ -28,3 +28,4 @@
                   还有canvas除了hierarchy里上下位置导致在上面还是在下面，还有本身shader 的 rendererqueue也会决定（transparent 3000）
 （也有可能是因为相比原来的插件上的shader，将lightmode = “UniversalFoeward”）
 （并不是上面的，可能是因为.meta没改原文件改了？）
+(我举得之前很难找出来错误一系列玄学，可能是项目本身他们一直忽略的bug:Dimensions of color surface does not match dimensions of depth surface)

@@ -1,0 +1,14 @@
+https://blog.uwa4d.com/archives/avartar.html
+
+ps
+wy的人因为自己改了眼动，这里也是可以联系到一些的
+一个人物挂载一套骨骼和一套mesh(skinned mehs renderer)，眼动之类的是改变骨骼里transform的的
+
+
+基础实现（等这个熟一点的优化后面再整理吧）
+1.创建骨骼GameObject，所有装备的蒙皮数据会最终合成到这个Prefab中。
+2.创建装备GameObject，用于搜集其中蒙皮数据以生成新的SkinnedMeshRenderer到骨骼Prefab中。
+3.public void CombineObject(GameObject skeleton, SkinnedMeshRenderer[] meshes, bool combine = false)传入骨骼的GameObject和蒙皮数据。
+//4.搜集装备蒙皮数据中的有效信息。
+//5.为骨骼GameObject生成新的SkinnedMeshRenderer。
+//6.挂接武器。

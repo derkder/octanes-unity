@@ -21,3 +21,5 @@
 也成了，真的和玄学一样。特别是加上空场景可以，项目场景不行，然后screenspace overlay可以screenspace camera不行这两个大前提
 最后的解决：
 后来问了mt，也不知道是为啥，后来一帆操作还原了mat和shader，就好了，就好了？？？
+但这个过程也知道了：画面和空场景想比偏暗可能是因为gamma矫正什么的，这次是因为叠了两层
+                  还有canvas除了hierarchy里上下位置导致在上面还是在下面，还有本身shader 的 rendererqueue也会决定（transparent 3000）

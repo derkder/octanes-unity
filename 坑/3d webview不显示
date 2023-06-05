@@ -17,9 +17,12 @@
 即使真的是这个问题的解决方法：本来想的是如果打开这个canvas view就将canvas设成overlay关闭再改回来，但这个会导致初始化的东西消失。所以应该新生成一个overlay型的canvas，将当前webview的prefab挂上去
 因此第四种猜测：项目自己的管线不支持，所以把shader从他自己的vulplex/defaultwebview设置成项目普遍用的ui/default
 成了！！！！！！！
-因此第四种猜测：实际实现的时候，怎么都觉得奇怪，于是试着运行时试着附上一摸一样的vulplex/defaultwebview shder
+因此第五种猜测：实际实现的时候，怎么都觉得奇怪，于是试着运行时试着附上一摸一样的vulplex/defaultwebview shder
 也成了，真的和玄学一样。特别是加上空场景可以，项目场景不行，然后screenspace overlay可以screenspace camera不行这两个大前提
+
+以上可以得出两种解决办法，一个新开overlay canvas， 一个loadurl后刷新shader
+
 最后的解决：
-后来问了mt，也不知道是为啥，后来一帆操作还原了mat和shader，就好了，就好了？？？
+后来问了mt，也不知道是为啥，后来一帆操作还原了mat和shader，就好了，就好了？？？打包让我们一起大声说，谢谢mt！！！
 但这个过程也知道了：画面和空场景想比偏暗可能是因为gamma矫正什么的，这次是因为叠了两层
                   还有canvas除了hierarchy里上下位置导致在上面还是在下面，还有本身shader 的 rendererqueue也会决定（transparent 3000）

@@ -19,3 +19,5 @@
 成了！！！！！！！
 因此第四种猜测：实际实现的时候，怎么都觉得奇怪，于是试着运行时试着附上一摸一样的vulplex/defaultwebview shder
 也成了，真的和玄学一样。特别是加上空场景可以，项目场景不行，然后screenspace overlay可以screenspace camera不行这两个大前提
+最后的解决：
+后来问了mt，也不知道是为啥，后来一帆操作还原了mat和shader，就好了，就好了？？？

@@ -26,3 +26,4 @@
 后来问了mt，也不知道是为啥，后来一帆操作还原了mat和shader，就好了，就好了？？？打包让我们一起大声说，谢谢mt！！！
 但这个过程也知道了：画面和空场景想比偏暗可能是因为gamma矫正什么的，这次是因为叠了两层
                   还有canvas除了hierarchy里上下位置导致在上面还是在下面，还有本身shader 的 rendererqueue也会决定（transparent 3000）
+（也有可能是因为相比原来的插件上的shader，将lightmode = “UniversalFoeward”）

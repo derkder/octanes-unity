@@ -29,3 +29,6 @@
 （也有可能是因为相比原来的插件上的shader，将lightmode = “UniversalFoeward”）
 （并不是上面的，可能是因为.meta没改原文件改了？）
 (我举得之前很难找出来错误一系列玄学，可能是项目本身他们一直忽略的bug:Dimensions of color surface does not match dimensions of depth surface)
+最后的最后：
+和库巴讨论，说他们渲染组也遇到这个问题，说是因为这里的材质球是动态加载的，存在在加载完成之前，就给材质球赋值的话就会有这种错误。
+他们的解决是刷新材质球，我比他们厉害，我只刷新shader

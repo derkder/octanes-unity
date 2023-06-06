@@ -1,5 +1,5 @@
 对于event的简单用法，下面是需要指定event激活的函数的参数格式的，这里和action结合下就好，也可以传参
-public event action OnResultReceived;（public Action<string> OnResultEvent）
+public event Action OnResultReceived;（public Action<string> OnResultEvent）
 OnResultReceived+=CurrentResultEvent[这是一个函数];
 OnResultReceived?.Invoke
 

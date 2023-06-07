@@ -1,0 +1,7 @@
+运行时加载：
+思路：将表格格式转换为csv格式，然后就可以像正常读取txt文件一样读取了
+https://www.youtube.com/watch?v=tI9NEm02EuE&ab_channel=DestinedToLearn
+
+
+编辑器工具加载
+using excel

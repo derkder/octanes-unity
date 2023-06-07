@@ -1,0 +1,2 @@
+回退一次commit
+git reset --soft HEAD^

@@ -3,5 +3,8 @@
 https://www.youtube.com/watch?v=tI9NEm02EuE&ab_channel=DestinedToLearn
 
 
-编辑器工具加载
+最规范的方法：
+编辑器工具加载（excel更新后需要刷新的btn也放在这里）
 using excel
+加载到.asset里（这里就可以用高端的数据格式【例如Dic】传）
+然后运行时从.asset里读取

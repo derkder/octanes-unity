@@ -1,2 +1,5 @@
 回退一次commit
 git reset --soft HEAD^
+
+
+tips: add - commit - stash changes - test - 没问题jiupush，有问题按上面的，好像千万不能reset hard，否则改动全没了

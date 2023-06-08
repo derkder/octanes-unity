@@ -1,0 +1,15 @@
+1、
+网上说的
+  git reset hard(丢失本地所有更改直接转到对应的分支)
+  git push origin HEAD --force(但是这里的force太危险了)
+
+2、若上次的push的东西不想要了
+  在showlog里点击想要撤回的记录
+  然后右键 reset "custom/yui" to this
+  然后commit 再push
+  
+3、若上次的push的东西要留着
+   在showlog里点击想要撤回的记录
+  然后右键  create branch at this version
+  相当于新建了一个这个上面的分支，然后旧分支留着接着改
+  等改完了再删新分支

@@ -1,3 +1,4 @@
+第一波整理：
 Addressables可以理解为是在AssetBundle的基础上，提供了一个管理系统可以让我们更好的组织和管理我们的资源。
 
 Addressable Asset System 允许开发者通过资源的地址来请求资源。资源（例如预制件）标记为“可寻址”后，就会生成一个可从任何地方调用的地址。
@@ -15,7 +16,7 @@ github.com/Unity-Technologies/Addressables-Sample
 
 
 
-
+第二波整理：
 实习遇到的：
   用下来感觉就是prefab标记成Addressable
   这样就可以在程序中通过这个prefab的地址取动态生成了
@@ -27,3 +28,21 @@ github.com/Unity-Technologies/Addressables-Sample
 
 打AA包最强攻略：（背景：微信小程序）：
   https://blog.csdn.net/linxinfa/article/details/122390621
+
+
+
+
+
+
+
+
+第三波整理：
+
+
+
+
+
+
+
+
+

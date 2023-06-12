@@ -1,0 +1,9 @@
+2.1、Horizontal Layout Group：
+即水平布局方式，子元素只会按照水平的方式排列，就算子元素太多超过父元素以后不会换行排列，关于具体的介绍可以看之前写的博客 unity中排版组件Horizontal Layout Group的使用
+
+2.2、Vertical Layout Group：【循环复用列表：https://linxinfa.blog.csdn.net/article/details/122019054】
+垂直布局的方式，与Horizontal Layout Group相对应，同样当元素超过父元素也不会换行：
+
+2.3、Grid Layout Group：[ 可以用来做背包]
+Grid Layout Group即网格布局组，听名字也可以理解就是可以按照面的方式来进行排版
+Grid Layout Group这种方式的布局，就是可以让元素换行的布局，就是综合Horizontal Layout Group与Vertical Layout Group这两种布局的综合体

@@ -1,0 +1,2 @@
+画布组 (Canvas Group) 可集中控制整组 UI 元素的某些方面，无需单独处理每个元素。（画布组的属性会影响所在的游戏对象以及所有子对象）
+https://blog.csdn.net/zhurouwanzi/article/details/129231342

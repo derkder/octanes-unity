@@ -1,3 +1,7 @@
 https://blog.csdn.net/weixin_45803990/article/details/112093581
 
+
+git tortoise：
+git log 选中想要的历史commit
+右键create branch by this commit
 git tortoise下git push选默认的就可以

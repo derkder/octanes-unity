@@ -4,6 +4,11 @@
 
 
 
+DIP（Dependency Inversion Principle， 依赖倒置）：
+高层模块不依赖低层次模块的细节，而是依赖抽象（不依赖具体的类，而是依赖于接口）。
+
+
+
 
 
 

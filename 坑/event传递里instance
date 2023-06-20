@@ -60,3 +60,23 @@ public int GetHealth()
    return health;//health是private属性
 }
 如果不在一个物体上想这么传递函数，就先instantiate一个出来再用同样的方法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+正常的单例模式：
+    继承一个单例，这个单例的脚本网上找一下就好

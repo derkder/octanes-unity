@@ -1,0 +1,6 @@
+1. 高性能：NativeContainer使用C++实现，避免了C#的垃圾回收机制带来的性能问题。    同时，NativeContainer提供了一些特殊的优化，如使用指针操作、内存池技术等，可以有效地提高程序的性能。
+2. 低GC：由于NativeContainer不依赖C#的垃圾回收机制，它的GC开销非常小。这使得NativeContainer非常适合用于处理大量数据的场景，可以避免频繁的GC导致程序的卡顿和性能下降。
+3. 多线程：由于NativeContainer是线程安全的，因此可以在Job System中进行多线程操作，从而进一步提高程序的性能。
+4. 内存管理：NativeContainer使用Unity的内存管理系统进行内存分配和回收，可以更好地管理内存，提高程序的稳定性和可靠性。
+
+总的来说，NativeContainer是Unity中一系列高性能、低GC、线程安全的集合类，可以用于处理大量数据和多线程操作的场景，提高程序的性能和可靠性。

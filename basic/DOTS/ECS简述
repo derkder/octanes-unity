@@ -1,1 +1,3 @@
 https://www.lfzxb.top/unity-dots-ecs-burst-complier-jobsystem/
+为什么会快：
+  对于三级缓存来说，会cache miss，但是现在，System在操作数据的时候只会收集它关心的Component数据，CPU运行时就会将这一整块内存装入高速缓存中，这样就减少了Cache Miss次数。

@@ -16,6 +16,7 @@ Unity 自带 NativeContainer类型为 NativeArray，ECS 包又扩展了NativeLis
 ## 使用方式简述(结构体)  
 [https://zhuanlan.zhihu.com/p/148160780]
 ### 创建 Job   
+
 '''
 public struct MyJob : IJob
 {
@@ -29,7 +30,9 @@ public struct MyJob : IJob
     }
 }
 '''
+
 ### 调度 Job    
+
 '''
 NativeArray<float> result = new NativeArray<float>(1, Allocator.TempJob);
 // 填充数据
@@ -46,4 +49,5 @@ float aPlusB = result[0];
 // 释放 result array
 result.Dispose();
 '''  
+
 ...

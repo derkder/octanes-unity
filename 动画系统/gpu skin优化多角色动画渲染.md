@@ -2,11 +2,9 @@
 https://www.cnblogs.com/murongxiaopifu/p/7250772.html  
 ## 项目链接：  
 https://github.com/chenjd/Render-Crowd-Of-Animated-Characters  
-
 ---
-
 ## 背景：  
-  ## 正常情况下，大家都会使用Animator来管理角色的动画，而角色也必须使用SkinnedMeshRender来进行渲染。  
+  正常情况下，大家都会使用Animator来管理角色的动画，而角色也必须使用SkinnedMeshRender来进行渲染。  
   ## 当要渲染的动画角色数量很大时主要会有以下两个巨大的开销：  
     1、CPU在处理动画时的开销。  
     2、每个角色一个Draw Call造成的开销。  
@@ -16,10 +14,7 @@ https://github.com/chenjd/Render-Crowd-Of-Animated-Characters
   ## 解决方法思想：  
     1、将动画相关的内容从CPU转移到GPU，同时由于CPU不需要再处理动画的逻辑了。而是可以用vertex shader来处理动画的逻辑  
     2、CPU不仅省去了这部分的开销而且SkinnedMeshRender也可以替换成一般的Mesh Render，我们就可以很开心的使用GPU Instancing来减少Draw Call了。  
-
 ---
-
-
 ## 具体实现  
     1、## 利用vertex shader设置顶点坐标的方式来展现我们的角色动画【AnimMap】【同时还要将角色的Animator或Animation去掉，将SkinnedMeshRender更换为一般的Mesh Render】  
         按照固定的频率对角色动画取样并记录取样点时刻角色网格上各个顶点的位置信息，并利用贴图的纹素的颜色属性保存对应顶点的位置）。这样该贴图就记录了整个动画时间内角色网格顶点在各个取样点时刻的位置，这个贴图我把它称为AnimMap。  

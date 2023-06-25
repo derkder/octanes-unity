@@ -1,0 +1,6 @@
+Model-View-ViewModel
+使用ViewModel替代了Presenter。
+原本P和V一对一的关系现在变为VM-V一对多的关系。
+
+这解决了什么问题呢？
+解决M的复用问题

@@ -1,0 +1,20 @@
+https://zhuanlan.zhihu.com/p/514292154
+https://zhuanlan.zhihu.com/p/279402691
+概述：
+    BlendShapes是直接控制顶点的位移得到动画,所以BlendShapes是存储在mesh里的。
+    所以任何预制体使用这个模型的mesh的话， skinnedMeshRender上会多出一个BlendShape里面包含一到多个表情。
+    然后可以用代码控制使用BlendShape的各个表情之间的混合
+
+原理：
+  在相邻两个网格间做插值运算，从一上形状融合到另一个形状；或者说是单个网格变形以实现许多预定义形状和任何数量之间组合的技术。
+  
+  
+  
+
+
+Audio2Face的插件：
+https://github.com/hecomi/uLipSync#vrm-support
+
+
+
+  可以用来捏脸

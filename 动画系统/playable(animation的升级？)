@@ -1,0 +1,4 @@
+https://zhuanlan.zhihu.com/p/97826181
+
+既能用到新的Mecanim动画系统里的这些新功能，又不用搞那些Animator Controller： Playable
+（playable API 是基础SDK， animator controller 是使用这个sdk开发的一个应用。-[这点存疑]）

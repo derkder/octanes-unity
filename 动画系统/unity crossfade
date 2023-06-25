@@ -1,0 +1,9 @@
+主要用作跳转到指定动画
+场景： 发现项目的动画状态机上没有指向 jump节点 的箭头， 只有jump节点 指出来的箭头
+其实使用的animator.crossFade进入的
+
+
+具体使用:
+function CrossFade (string animation, float fadeLength, mode : PlayMode = PlayMode.StopSameLayer) : void
+在一定时间内淡入名称为name的动画并且淡出其他动画。（上面的场景里将fadeLength设置为0，所以只是用这个函数进入状态机的一个节点罢了)
+如果模式是PlayMode.StopSameLayer，在同一层的动画将在动画淡入的时候淡出。如果模式是PlayMode.StopAll，所有动画将在淡入的时候淡出。

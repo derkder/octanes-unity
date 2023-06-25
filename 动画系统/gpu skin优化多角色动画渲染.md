@@ -20,7 +20,8 @@ https://github.com/chenjd/Render-Crowd-Of-Animated-Characters
  #### 1、利用vertex shader设置顶点坐标的方式来展现我们的角色动画【AnimMap】【同时还要将角色的Animator或Animation去掉，将SkinnedMeshRender更换为一般的Mesh Render】  
         按照固定的频率对角色动画取样并记录取样点时刻角色网格上各个顶点的位置信息，并利用贴图的纹素的颜色属性保存对应顶点的位置）。这样该贴图就记录了整个动画时间内角色网格顶点在各个取样点时刻的位置，这个贴图我把它称为AnimMap。  
         其中AnimMap纹理贴图的水平方向记录网格各个顶点的位置，垂直方向是时间信息。  
-      ![AnimMap](/动画系统/imgs/AnimMap示意图.png)  
+![AnimMap](/动画系统/imgs/AnimMap示意图.png)  
+      
  #### 2、GPU Instancing【先要改成meshrenderer因为gpuinstancing不支持SkinnedMeshRender】  
         GPU Instancing的最大优势是可以减少内存使用和CPU开销。当使用GPU Instancing时，不需要打开批处理，GPU Instancing的目的是一个网格可以与一系列附加参数一起被推送到GPU。  
         

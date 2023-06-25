@@ -4,8 +4,7 @@ https://www.cnblogs.com/murongxiaopifu/p/7250772.html
 https://github.com/chenjd/Render-Crowd-Of-Animated-Characters  
 ---
 ## 背景：  
-  正常情况下，大家都会使用Animator来管理角色的动画，而角色也必须使用SkinnedMeshRender来进行渲染。  
-  ### 当要渲染的动画角色数量很大时主要会有以下两个巨大的开销：  
+  ### 正常情况下，大家都会使用Animator来管理角色的动画，而角色也必须使用SkinnedMeshRender来进行渲染。 当要渲染的动画角色数量很大时主要会有以下两个巨大的开销：  
     1、CPU在处理动画时的开销。  
     2、每个角色一个Draw Call造成的开销。  
   ### 这样的情况下遇到的瓶颈：  

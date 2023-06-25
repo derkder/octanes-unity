@@ -4,7 +4,7 @@
 #### 说明：
         瑶台的人物脸部表情动作的控制方式是脸部skinned mesh rendererd的51个参数
 #### 各插件预研
-        ![Audio2face插件预研](/动画系统/imgs/audio2face预研.png)
+![Audio2face插件预研](/动画系统/imgs/audio2face预研.png)  
 
  
 
@@ -16,7 +16,7 @@
 #### 插件网址：  
          https://github.com/hecomi/uLipSync#vrm-support
 #### 对应的插件组件说明：           
-       ![Audio2face组件说明](/动画系统/imgs/audio2face组件说明.png)
+![Audio2face组件说明](/动画系统/imgs/audio2face组件说明.png)  
 #### 具体使用方法：
 将上面说的两个组件挂在人物身上，选中人物脸部的skin mesh  renderer。生成新的profile文件，对其进行校准得到映射关系，校准使用麦克风——组件uLipSyncMicrophone， 校准使用音谱——组件uLuLipSyncMicrophone   
 上面设置了wav格式文件中的内容片段和音素对应的关系，在我们使用的插件中，每个音素对应一个blendshape参数的修改，这在瑶台人物脸部使用了51维的脸部表现显然是不合理的，因此进行重映射，映射的方式为更改脚本的核心更改如下：

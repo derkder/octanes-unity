@@ -3,3 +3,17 @@ model-view-presenter
 MVP定义了Presenter和View之间的接口，让一些可以根据已有的接口协议去各自分别独立开发，以此去解决界面需求变化频繁的问题。
 
 P是升级的C，其中以前C层只是负责一些简单的转发和处理，现在P的任务变的更重，除了桥梁的作用之外，还需要做初步甚至高级的逻辑处理来处理M-V或者V-M的交流过程。
+
+
+
+
+
+
+
+
+
+
+后记，在实际使用中，很多情况甚至不需要model，因为数据什么的一般可以直接记录在sys里：
+遇到需要model的背景：（感觉这个也可以直接写在sys里，可能这里是用model比较规范）
+  dialog view需要支持很多种情况下都要弹出，每种弹出下的字都不一样，所以用DialogModel:IDialogModel装数据
+  其中使用IOC的方式操作这一步，即在system中往里面model里装数据(开启dialog view弹窗的功能也不再写在presenter里而是直接用systemnl调用)，然后再presenter里显示当前model装了什么数据

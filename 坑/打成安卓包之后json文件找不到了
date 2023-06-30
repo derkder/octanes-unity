@@ -1,2 +1,13 @@
 https://blog.csdn.net/wks310/article/details/88235713
 应该json文件一定要放到StramingAssets文件夹里
+
+
+以及对于读取list类的json文件，在cs代码中要先用class把list包起来；
+public class VoteCententList
+{
+    public List<VoteCentent> contentList;
+    public VoteCententList()
+    {
+        contentList =  new List<VoteCentent>();
+    }
+}

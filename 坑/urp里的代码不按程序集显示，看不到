@@ -1,2 +1,6 @@
 它们之前居然都在library/packagecache里
 挪到package里就对了
+
+
+还有一种可能可以的办法：
+edit->preferences->ExternalTools->Generate .csproj files for的列表里多勾几个试试

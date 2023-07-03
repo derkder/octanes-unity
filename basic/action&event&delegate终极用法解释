@@ -18,3 +18,22 @@ event：
 
 
 
+
+
+另一种监听模式的实现
+//isToggle被改动就调用ToggleStateChange
+public bool IsToggled { get => _isChosen.isOn; set => ToggleStateChange(value); }
+private void ToggleStateChange(bool value)
+    {
+        _isChosen.isOn = value;
+        if (value)
+        {
+            _goChoose.SetActive(true);
+            _goCancle.SetActive(false);
+        }
+        else
+        {
+            _goChoose.SetActive(false);
+            _goCancle.SetActive(true);
+        }
+    }

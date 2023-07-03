@@ -10,4 +10,6 @@
   他们的区别：https://blog.csdn.net/yu__jiaoshou/article/details/102742784
 
 
-至于为什么mask就不行：  no idea
+至于为什么mask就不行：  
+    因为mask需要一个Image来当作遮罩区域,子节点在Image罩到的区域才会显示
+    但交互把子物体ViewPort上的image组件搞成了一个空的图片，所以啥都罩不住

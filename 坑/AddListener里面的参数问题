@@ -25,4 +25,3 @@ _superToggleList[i].onValueChanged.AddListener(delegate {
 _superToggleList[i].onValueChanged.AddListener(() => _presenter.isTrue);//其中isTrue传入的参数为bool
 _superToggleList[i].onValueChanged.AddListener(() => _presenter.OnRefreshList(i));
 
-然而最后这上面一行只是编译通过了，实际还是不行，所以toggle加的listener对应的事件好像只能传入Toggle或者bool否则

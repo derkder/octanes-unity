@@ -1,0 +1,13 @@
+问题背景：
+  一般来说，scrollView中的子物体ViewPort上挂载的mask可以使需要展示的列表只显示mask对应的区域的物体
+  但是，今天， 这个mask不起作用了！而且子物体ViewPort设置的大小也是正确的，相当于区域也是正确的
+
+
+
+
+解决方法：
+  把mask组件删除了，换成rect mask 2d就对了
+  他们的区别：https://blog.csdn.net/yu__jiaoshou/article/details/102742784
+
+
+至于为什么mask就不行：  no idea

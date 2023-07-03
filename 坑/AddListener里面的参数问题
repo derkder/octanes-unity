@@ -2,6 +2,24 @@
 myButton.onClick.AddListener(() => MyFunction(myString));
 myButton.onClick.AddListener(MyFunction(myString));
 
-
 因为AddListener中参数只能传递 没有参数的函数体
 第一种相当于传递的没有参数的匿名函数，但这个匿名函数的函数体是这个带参数的函数体MyFunction(myString)，所以可以
+
+
+
+
+
+
+
+
+
+
+
+
+以及还有一个toggle下的
+https://docs.unity3d.com/2019.1/Documentation/ScriptReference/UI.Toggle-onValueChanged.html
+上面的可以下面的不行
+_superToggleList[i].onValueChanged.AddListener(delegate {
+                _presenter.OnRefreshList(i);
+            });
+_superToggleList[i].onValueChanged.AddListener(() => _presenter.OnRefreshList(i));

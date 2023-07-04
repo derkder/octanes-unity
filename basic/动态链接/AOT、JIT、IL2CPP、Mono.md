@@ -7,7 +7,7 @@ unity公司就自行研发了IL2cpp，把本来应该在mono的虚拟机上跑�
 ④有了IL2CPP，程序尺寸可以相对缩小，运行速度可以提高！
 ⑤使用了IL2CPP在堆内存分配方面和Mono 相比，Reserved Total 是可以下降的，而 Mono的 Reserved Total 只会上升不会下降。
 (mono打包快但最后的包还是用il2cpp?)
-https://blog.csdn.net/cgExplorer/article/details/107029630
+https://blog.csdn.net/cgExplorer/article/details/107029630  
 !(mono&IL2CPP)[basic/动态链接/imgs/mono&IL2CPP.png]
 
 

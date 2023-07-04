@@ -8,7 +8,7 @@ unity公司就自行研发了IL2cpp，把本来应该在mono的虚拟机上跑�
 ⑤使用了IL2CPP在堆内存分配方面和Mono 相比，Reserved Total 是可以下降的，而 Mono的 Reserved Total 只会上升不会下降。  
 (mono打包快但最后的包还是用il2cpp?)  
 https://blog.csdn.net/cgExplorer/article/details/107029630    
-![mono&IL2CPP](/imgs/mono&IL2CPP.png)    
+![mono&IL2CPP](imgs/mono&IL2CPP.png)    
 
 
 ##  IL：intermediate language中间语言  

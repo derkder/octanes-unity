@@ -13,8 +13,8 @@ https://blog.csdn.net/cgExplorer/article/details/107029630
 
 ##  IL：intermediate language中间语言  
 C#或者VB这样遵循CLI规范的高级语言，被先被各自的编译器编译成中间语言：IL（CIL），等到需要真正执行的时候，这些IL会被加载到运行时库，也就是VM中，由VM动态的编译成汇编代码（JIT）然后在执行。  
-![IL](imgs/IL.png)
-
+![IL](imgs/IL.png)  
+https://zhuanlan.zhihu.com/p/19972689  
 
 
 

@@ -1,0 +1,6 @@
+背景：
+  anim.play失效
+  报错：“The AnimationClip ‘XXX’ used by the Animation component ‘XXX’ must be marked as Legacy.”
+
+解决：
+  https://blog.csdn.net/Prototype___/article/details/124773832

@@ -1,0 +1,12 @@
+出错背景：
+  private void Start()
+  {
+      OnWellChangeEvent += ChangeSprite;
+      OnWellChangeEvent += GameManager.Instance.MainCamera.GetComponent<TwistEffect>().ChangeTwistVal;
+  }
+  但是参数是对的
+
+
+
+实际上：
+  TwistEffect添加的值也是Start里调用的，所以TwistEffect没赋值，所以其实是空指针问题

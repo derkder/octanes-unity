@@ -19,3 +19,4 @@
       而且按chatgpt说的在AudioClip上方放上[SerializeField]不就应该可以序列化了
 最后的结论:另一个引用类型的数据不消失是因为它被我加上了[Serialzable]
           [SerializeField]只是序列化地址
+另： 只有[Serialzable]的数据类型和ScriptableObject可以序列化显示

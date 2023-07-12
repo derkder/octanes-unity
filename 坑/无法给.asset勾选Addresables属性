@@ -1,3 +1,6 @@
 有人看源码发现，editor下的类是不可以aa的
 源码中有检查BuildUtility.IsEdtorAssembly(mainAssetType.Assembly)
 也就是一旦这个类被editor下的调用就不行了
+
+
+包括代码.asset都不能放到Editor文件夹里

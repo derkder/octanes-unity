@@ -1,0 +1,6 @@
+JsonConvert.DeserializeObject NullReferenceException
+
+https://blog.csdn.net/weixin_44345870/article/details/112687601
+反序列化对应的类需要有构造函数：
+“JsonConvert.DeserializeObject生成类时，首先调用类的无参构造函数，若未定义类的无参构造函数，则会调用系统默认无参构造函数，再进行赋值。
+但由于未给Cube定义无参构造函数，所以，生成类时，不会生成Cube的子类Point，即调用Point就会引起引用异常。同样，Json反序列化赋值时，若为给私有成员设置赋值接口，JsonConvert就会无法赋值使得Length等始终为0。

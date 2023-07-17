@@ -1,2 +1,3 @@
 浅显地理解，一个layer对应一个mask来屏蔽这一块儿的动作，mask可以是脸，这样的话这个layer只会控制脸
 https://blog.csdn.net/luoyikun/article/details/121879926
+https://www.cnblogs.com/hammerc/p/4832637.html

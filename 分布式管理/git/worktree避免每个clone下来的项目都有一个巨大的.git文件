@@ -1,0 +1,7 @@
+在A项目下右键 worktrees
+左下角add
+location填想要放到的路径B
+
+
+添加完毕之后，在B路径下的项目右键git sync
+local branch 和 remote branch都填想要切的分支，注意这里的分支和A路径上的项目好像绝对不能是一样的

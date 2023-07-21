@@ -1,4 +1,4 @@
 https://blog.csdn.net/weixin_43553694/article/details/104118402
 其中，别勾选squash
-不勾直接merge push很丝滑
-勾了说另一个分支上的推送记录怎么怎么有问题
+squash相当于把要合并的develop分支上的commit再在master分支也做一遍，所以
+我遇到的是develop开发的中途git的检测变严格了，导致好多报错

@@ -1,2 +1,4 @@
 https://blog.csdn.net/weixin_43553694/article/details/104118402
-其中，别点squash
+其中，别勾选squash
+不勾直接merge push很丝滑
+勾了说另一个分支上的推送记录怎么怎么有问题

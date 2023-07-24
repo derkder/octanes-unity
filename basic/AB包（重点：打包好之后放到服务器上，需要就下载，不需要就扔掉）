@@ -23,3 +23,12 @@ AssetBundle是将资源使用Unity提供的一种用于存储资源的压缩格�
 具体怎么打ab包
 https://blog.csdn.net/qq_31967569/article/details/102625217
 https://docs.unity3d.com/cn/current/Manual/AssetBundles-Workflow.html
+
+
+
+Addresables相比于AssetBundle的优点：（ChatGPT）
+1、使用AssetBundles进行动态加载时，需要！！！！手动管理资源的引用和卸载！！！，并且需要考虑！！！资源的依赖关系和加载的顺序！！！！，比较容易出现资源泄漏和加载错误的问题。
+  相比之下，Addressables提供了更强大、更简单的动态加载机制，可以更方便地管理资源的依赖关系和加载流程，降低了出错的风险，提高了开发效率和代码可维护性。因此，如果需要频繁进行动态加载的话，使用Addressables会更为方便和高效。
+2、对于跨平台的支持：
+  AssetBundles也可以实现跨平台使用，但需要分别为每个平台打包不同的AssetBundles。这意味着为了支持多个平台，需要构建和维护多个AssetBundles版本，并且需要处理这些版本之间的依赖关系和兼容性问题。
+  相比之下，Addressables提供了更加通用和高效的资源管理机制，可以在不同平台之间共享和重用资源，无需重新构建和打包多个版本。这意味着，使用Addressables可以更加轻松地实现跨平台兼容性，并且可以减少资源的重复使用，提高开发效率和代码可维护性。

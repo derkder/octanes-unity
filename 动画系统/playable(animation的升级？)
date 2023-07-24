@@ -2,3 +2,6 @@ https://zhuanlan.zhihu.com/p/97826181
 
 既能用到新的Mecanim动画系统里的这些新功能，又不用搞那些Animator Controller： Playable
 （playable API 是基础SDK， animator controller 是使用这个sdk开发的一个应用。-[这点存疑]）
+
+没有专门的工具，就是靠纯代码实现自定义动画系统。
+简单的说，Playable可以通过一组API来创建一个Graph，而每个Graph可以由多个树形结构组成，每个树状结构都由一个Output节点作为根节点，叶子结点则由各种Playable组成。

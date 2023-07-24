@@ -18,3 +18,8 @@ Playable更加灵活，可以直接控制动画各种属性。
 Playable有强大的混合（blend）能力
   使用Playable不仅能在两个Animation Clip之间混合，还能在Clip和Animator Controller之间混合，甚至多个Animator Controller之间混合。在Animator中，两个State Machine之间是不能过渡的，但是使用Playable就可以。
   还可以同时使用状态机和Playable，固定的动画状态转换用状态机，需要动态变化的使用Playable。
+
+
+
+实际使用：
+还是animator好多了

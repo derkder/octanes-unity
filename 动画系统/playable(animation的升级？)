@@ -5,3 +5,16 @@ https://zhuanlan.zhihu.com/p/97826181
 
 没有专门的工具，就是靠纯代码实现自定义动画系统。
 简单的说，Playable可以通过一组API来创建一个Graph，而每个Graph可以由多个树形结构组成，每个树状结构都由一个Output节点作为根节点，叶子结点则由各种Playable组成。
+
+
+用Playable有什么好处？
+Playable结构简单。
+  Playable没有复杂交叠的状态机。如果只是播放动画，几行代码就够了，用起来就像旧的Animation组件一样。如果是复杂的动画，也可以预先创建好PlayableGraph子图，在需要时添加到主图中。
+Playable可以运行时修改。
+  Animator状态机是没办法运行时修改的，而且只能使用OverrideController来替换动画，有时候不太方便。因为当动画数量非常多的时候，如果不能动态添加、删除State，那就需要预先制作一个巨大的状态机来满足所有状态，维护起来非常麻烦。
+  但是Playable API允许你运行时修改动画的逻辑结构。
+Playable更加灵活，可以直接控制动画各种属性。
+  Animator中是通过变量来间接控制权重的，而Playable中，你可以直接控制动画的权重和时间。不过需要注意的是，虽然这样很灵活，但是大多数情况下没有Animator的变量控制方便。
+Playable有强大的混合（blend）能力
+  使用Playable不仅能在两个Animation Clip之间混合，还能在Clip和Animator Controller之间混合，甚至多个Animator Controller之间混合。在Animator中，两个State Machine之间是不能过渡的，但是使用Playable就可以。
+  还可以同时使用状态机和Playable，固定的动画状态转换用状态机，需要动态变化的使用Playable。

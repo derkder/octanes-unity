@@ -23,3 +23,5 @@ Playable有强大的混合（blend）能力
 
 实际使用：
 还是animator好多了
+不！但是如果有100多个animation，比如说有很多定制的舞蹈，那还是playable
+然后playable visualizer的安装方法用package manager的url方法才装进去的

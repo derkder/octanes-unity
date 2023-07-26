@@ -25,3 +25,4 @@ Playable有强大的混合（blend）能力
 还是animator好多了
 不！但是如果有100多个animation，比如说有很多定制的舞蹈，那还是playable
 然后playable visualizer的安装方法用package manager的url方法才装进去的
+一般来说，一些角色的固定动画状态的转变我们可以继续用Animator状态机，而那些需要动态改变的功能我们就用Playable（这个思路很重要）。

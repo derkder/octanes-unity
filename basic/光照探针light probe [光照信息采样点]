@@ -6,3 +6,11 @@
 放置light probe：放置Light Probe时尽量放到光影变化多的地方
 非静态物体根据距离最近的探头来接收光照。光照探头会将整个空间划分成一个个四面体，一个物体最终从哪个探头读取光照数据这个物体最终落在哪一个四面体中确定的。为了能够形成这些四面体，
 探头在摆放时必须形成三维的立体形状或者笼子的形状（不能只在一个平面上摆放）。
+
+
+
+
+优化light probe
+https://www.gdcvault.com/play/1015312/Light-Probe-Interpolation-Using-Tetrahedral
+传统的LightProbe做法为了方便查询都是划定一个Volume，然后整齐的排布LightProbe，这种方式比较浪费
+Unity提出了Tetrahedral的做法，就是先自定义的放置Probe，然后根据Probe位置把所有Probe的凸包四面体化

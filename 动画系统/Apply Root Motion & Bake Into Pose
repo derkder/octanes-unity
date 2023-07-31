@@ -1,3 +1,7 @@
 https://zhuanlan.zhihu.com/p/151387595
 root motion的直观表现： 人物的动画会带动人物移动（交由美术制作的动画 驱动 逻辑体的运动）
 Root Transform的作用：比如勾选了Root Transform Position (Y)的Bake Into Pose，那动画就不会影响物体的Y轴位置了
+
+
+
+https://blog.csdn.net/cubesky/article/details/39478207

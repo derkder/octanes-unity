@@ -5,3 +5,10 @@ Root Transform的作用：比如勾选了Root Transform Position (Y)的Bake Into
 
 
 https://blog.csdn.net/cubesky/article/details/39478207
+
+
+
+Unity中的Root Motion和Bake Into Pose是两个不同的选项，它们的区别如下：
+1. Root Motion：启用Root Motion选项时，动画中的根运动（如位置和旋转）会被应用到角色的Transform组件上。这意味着角色的运动将与动画中的运动一致，无需编写额外的脚本来控制。这个选项通常用于制作需要精细控制的动作游戏、格斗游戏等。
+2. Bake Into Pose：启用Bake Into Pose选项时，动画中的位移和旋转信息将转换为静态的位移和旋转信息，并应用到角色的骨骼上。这意味着角色将按照动画中的姿势进行动作，可用于制作人物定格等效果。
+需要注意的是，这两个选项是互斥的，你只能启用其中的一个选项。在实际制作中，你需要根据游戏的需求来选择适合的选项。如果你需要精细控制角色的运动，可以使用Root Motion；如果你需要制作人物定格等效果，可以使用Bake Into Pose。

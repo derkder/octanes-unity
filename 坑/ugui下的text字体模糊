@@ -1,0 +1,10 @@
+背景：
+  把font size拉大就不会有这个问题了
+  alpha已经调成1了
+  gamma矫正也做好了的
+解决：
+  用了项目里的一个自制组件代替component（试过换材质，或者变text mesh pro换不了）
+实际原因：
+  https://blog.51cto.com/u_15127658/3934177
+  根本原因：像素少。
+  解决办法：字体的 font size将像素设置大些，然后用scale来缩放大小

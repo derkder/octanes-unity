@@ -3,7 +3,7 @@
   alpha已经调成1了
   gamma矫正也做好了的
 解决：
-  用了项目里的一个自制组件代替component（试过换材质，或者变text mesh pro换不了）
+  用了项目里的一个自制组件代替component（试过换材质，或者变text mesh pro换不了(如果能换成TMP是可以解决这个问题的)）
 实际原因：
   https://blog.51cto.com/u_15127658/3934177
   根本原因：像素少。

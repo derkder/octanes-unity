@@ -1,0 +1,23 @@
+git pull遇到：
+error: xx bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: unpack-objects failed
+
+
+
+先试这个管不管用：
+git config --global http.postBuffer 524288000  # Increase the buffer to 500MB
+
+
+不行的话：
+This error may occur for memory needs of git. You can add these lines to your global git configuration file, 
+which is .gitconfig in $USER_HOME, in order to fix that problem.（/用户/86189/.gitconfig）
+
+[core] 
+packedGitLimit = 512m 
+packedGitWindowSize = 512m 
+[pack] 
+deltaCacheSize = 2047m 
+packSizeLimit = 2047m 
+windowMemory = 2047m

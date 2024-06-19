@@ -1,1 +1,3 @@
 该系统强制 Unity 仅加载渲染当前相机所需的 mipmap 级别位置，而不是默认加载所有。
+
+[https://blog.csdn.net/UWA4D/article/details/129314695]

@@ -1,0 +1,15 @@
+有的时候：
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+就可以了
+
+
+但顽固的时候需要：
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy http://127.0.0.1:1080
+其中后面的一串数字通过：
+“# 找到代理:网络与Internet > 代理> 编辑 >复制代理ip地址和端口 eg: http=127.0.0.1:3213;https=127.0.0.1:3213(:后面就是端口)"查看
+
+
+
+https://blog.csdn.net/Hodors/article/details/103226958

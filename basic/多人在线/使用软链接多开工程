@@ -2,7 +2,6 @@
  
 打开txt输入：
   mklink /d C:\MyProject\yaotai_dev_cp\Assets C:\MyProject\yaotai_dev\Assets
-  mklink /d C:\MyProject\yaotai_dev_cp\Library C:\MyProject\yaotai_dev\Library
   mklink /d C:\MyProject\yaotai_dev_cp\Packages C:\MyProject\yaotai_dev\Packages
   mklink /d C:\MyProject\yaotai_dev_cp\ProjectSettings C:\MyProject\yaotai_dev\ProjectSettings
   。。。。。。

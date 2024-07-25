@@ -1,0 +1,8 @@
+三年前遇到的问题居然又遇到了
+项目本身是urp的
+
+1 
+选中所有的导入的material
+2 
+Edit ----- Render Pipeline -------- Light weight Render Pipeline
+然后点击 upgrade Projet Materials to LightweightRP materials

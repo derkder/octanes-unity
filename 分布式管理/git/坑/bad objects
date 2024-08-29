@@ -1,0 +1,4 @@
+fatal: bad object refs/remotes/origin/<name of branch>
+error: https://bitbucket.org/myusername/myproject.git did not send all necessary objects
+
+找到.git文件夹下的refs/remotes/origin/<name of branch>（这个虽然看上去是分支名但实际是文件夹里的一个文件） 就好了

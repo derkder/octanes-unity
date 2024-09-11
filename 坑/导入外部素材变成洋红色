@@ -6,3 +6,9 @@
 2 
 Edit ----- Render Pipeline -------- Light weight Render Pipeline
 然后点击 upgrade Projet Materials to LightweightRP materials
+
+
+2024.9.11  
+又碰到了，但是我这个unity版本居然没有！
+Window -> Rendering -> Render Pipeline Converter   
+但是没有解决我这次的问题:/

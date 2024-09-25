@@ -13,6 +13,10 @@ NativeContainer以相对安全的托管类型的方式指向一个非托管的�
 Unity 自带 NativeContainer类型为 NativeArray，ECS 包又扩展了NativeList、NativeHashMap、NativeMultiHashMap和NativeQueue  
 默认情况下，Job 同时拥有NativeContainer的读写权限，但 C# Job System 不允许多个 Job 同时拥有对一个NativeContainer的写权限，因此对不需要写权限的NativeContainer加上[ReadOnly]特性，以减少性能影响  
 
+# Burst编译器
+Burst编译器会对任务的运行流程进行优化，让他们工作得更快更好，
+
+
 ## 使用方式简述(结构体)  
 [https://zhuanlan.zhihu.com/p/148160780]
 ### 创建 Job   

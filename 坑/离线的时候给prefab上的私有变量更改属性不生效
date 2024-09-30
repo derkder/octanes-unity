@@ -1,0 +1,5 @@
+遇到的情景是在离线的情况下，有一个component本来被生成并且附到一个prefab上了，然后我想通过getset更改它的私有变量
+但是一运行立马这个数据就卸载掉了，变成null了
+
+因为这种就是不行的
+再深层点将，除了public 和 serializable的变量会导致prefab改变，也就是可以把东西附加到prefab上，如果prefab上的脚本加一个private变量根本不会改变prefab本身，这侧面说明了prefab也没记录到新东西
